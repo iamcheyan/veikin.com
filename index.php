@@ -55,7 +55,7 @@
 					<h5>
 						<b> VOL.<?php echo $vol = $row->vol; echo " "; echo $name = $row->name; ?></b>
 						<span>
-							<a href="http://dl.veikin.com/book/veikin/vol<?php echo $vol; ?>/" _target="_blank">购买</a>
+							即将发布
 						</span>
 					</h5>
 				</dd>
