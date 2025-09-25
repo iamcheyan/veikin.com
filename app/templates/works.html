@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="section">
+    <h1 class="section-title">{{ t.section_works }}</h1>
+    <div class="grid works">
+      {% for work in site.works %}
+        <a class="card lift" href="{{ work.url }}" target="_blank" rel="noopener">
+          <img src="{{ work.image }}" alt="{{ work.title }}"/>
+          <div class="card-body">
+            <h3>{{ work.title }}</h3>
+            <p>{{ work.description }}</p>
+            {% if work.tags %}
+              <div class="chips">
+                {% for tag in work.tags %}
+                  <span class="chip sm">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
+

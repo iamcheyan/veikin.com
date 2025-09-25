@@ -1,0 +1,38 @@
+{
+  "title": "veikin | 航海式网页工作室",
+  "brand": "veikin",
+  "description": "面向远方的网页与应用工作室。以海盗精神探索未知，用静态为帆、工程为骨、设计为舵，让品牌驶向更深的海域。",
+  "hero": {
+    "tagline": "向远方起航",
+    "title": "做敢于乘风的网页与应用",
+    "subtitle": "我们像海盗一样敏捷，像航海家一样严谨：为追求速度与气质的品牌，打造轻盈、稳定、易维护的多语言网站与小型应用。",
+    "note": "静态生成 · 多语言 · 轻量交付",
+    "cta_primary": { "label": "查看作品", "url": "/zh/works.html" },
+    "cta_secondary": { "label": "开始项目", "url": "mailto:hello@veikin.com" }
+  },
+  "contact": {
+    "email": "hello@veikin.com",
+    "phone": "+818012345678",
+    "whatsapp": "818012345678"
+  },
+  "highlights": [
+    { "title": "海盗精神", "description": "以小博大，快速试航，快速验证，把资源用在刀刃上。" },
+    { "title": "海浪级速度", "description": "静态生成 + 边缘加速，移动网络同样顺畅。" },
+    { "title": "面向远方", "description": "日/中/英一体化流程，轻松跨市场扩张。" }
+  ],
+  "about": "我们与创业者与小团队并肩，做能出海的品牌网站与小而美的 App 服务，关注可维护的代码与可传承的设计系统。",
+  "works": [
+    { "title": "餐饮品牌官网", "description": "突出美食与预订的清爽设计。", "image": "/static/images/sample1.jpg", "url": "https://example.com", "tags": ["餐饮", "设计", "静态站"] },
+    { "title": "SaaS 产品页", "description": "面向 B2B 的清晰价值表达。", "image": "/static/images/sample2.jpg", "url": "https://example.com", "tags": ["SaaS", "B2B"] }
+  ],
+  "t": {
+    "nav_home": "首页",
+    "nav_works": "作品",
+    "nav_contact": "联系我们",
+    "contact_prompt": "欢迎联系",
+    "section_about": "关于工作室",
+    "section_works": "作品展示",
+    "view_all": "查看全部",
+    "footer_rights": "版权所有"
+  }
+}

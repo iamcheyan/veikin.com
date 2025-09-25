@@ -1,0 +1,38 @@
+{
+  "title": "veikin | 航海するウェブスタジオ",
+  "brand": "veikin",
+  "description": "海図のない海へ。海賊の敏捷さと航海士の精度で、軽量なウェブと小さなアプリを設計・開発します。静的は帆、エンジニアリングは龍骨、デザインは舵。",
+  "hero": {
+    "tagline": "遠洋へ出航",
+    "title": "波に強いサイトと小さなアプリ",
+    "subtitle": "速く、保守しやすく、多言語。速度と品位を両立したウェブ体験を。",
+    "note": "Static-first · 多言語 · 軽量デリバリー",
+    "cta_primary": { "label": "制作実績を見る", "url": "/ja/works.html" },
+    "cta_secondary": { "label": "お問い合わせ", "url": "mailto:hello@veikin.com" }
+  },
+  "contact": {
+    "email": "hello@veikin.com",
+    "phone": "+818012345678",
+    "whatsapp": "818012345678"
+  },
+  "highlights": [
+    { "title": "海賊の機動", "description": "小さく試し、素早く検証。資源を一点集中で有効活用。" },
+    { "title": "波速のパフォーマンス", "description": "静的生成 + エッジ配信で、モバイルでも滑らか。" },
+    { "title": "遠方志向の設計", "description": "日中英を一つのワークフローで。越境展開を軽やかに。" }
+  ],
+  "about": "創業者やスモールチームと伴走し、出航可能なサイトと小さなアプリサービスを設計・実装。長く使える設計と低い運用コストを重視します。",
+  "works": [
+    { "title": "和食店サイト", "description": "写真重視のメニュー表示と予約導線。", "image": "/static/images/sample1.jpg", "url": "https://example.com", "tags": ["Restaurant", "Design", "Static"] },
+    { "title": "IT 企業 LP", "description": "サービス訴求のランディングページ。", "image": "/static/images/sample2.jpg", "url": "https://example.com", "tags": ["Landing", "B2B"] }
+  ],
+  "t": {
+    "nav_home": "ホーム",
+    "nav_works": "制作実績",
+    "nav_contact": "お問い合わせ",
+    "contact_prompt": "ご相談はこちら",
+    "section_about": "私たちについて",
+    "section_works": "制作実績",
+    "view_all": "すべて見る",
+    "footer_rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "veikin | Seafaring Web Studio",
+  "brand": "veikin",
+  "description": "We build lean websites and small apps with a pirate's agility and a navigator's rigor — static as the sail, engineering as the keel, design as the helm.",
+  "hero": {
+    "tagline": "Sail for the far horizon",
+    "title": "Websites and apps that ride the waves",
+    "subtitle": "Fast, maintainable, multilingual. Built for brands that seek velocity and character.",
+    "note": "Static-first · Multilingual · Lightweight delivery",
+    "cta_primary": { "label": "View recent work", "url": "/en/works.html" },
+    "cta_secondary": { "label": "Start a project", "url": "mailto:hello@veikin.com" }
+  },
+  "contact": {
+    "email": "hello@veikin.com",
+    "phone": "+818012345678",
+    "whatsapp": "818012345678"
+  },
+  "highlights": [
+    { "title": "Pirate agility", "description": "Prototype fast, validate faster, invest where it matters." },
+    { "title": "Wave-speed performance", "description": "Static rendering + edge delivery for smooth mobile experience." },
+    { "title": "Built for the horizon", "description": "Japanese/Chinese/English in one workflow for cross-market growth." }
+  ],
+  "about": "We work with founders and small teams to ship seaworthy sites and compact app services — clear systems, minimal surface area, long-term maintainability.",
+  "works": [
+    { "title": "Restaurant Website", "description": "Photo-forward menu and booking flow.", "image": "/static/images/sample1.jpg", "url": "https://example.com", "tags": ["Restaurant", "Design", "Static"] },
+    { "title": "SaaS Landing", "description": "Clear value proposition for B2B audience.", "image": "/static/images/sample2.jpg", "url": "https://example.com", "tags": ["SaaS", "B2B"] }
+  ],
+  "t": {
+    "nav_home": "Home",
+    "nav_works": "Works",
+    "nav_contact": "Let's talk",
+    "contact_prompt": "Let's talk",
+    "section_about": "About",
+    "section_works": "Portfolio",
+    "view_all": "View all",
+    "footer_rights": "All rights reserved."
+  }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>{{ site.title or 'veikin' }} · Web Studio</title>
+    <meta name="description" content="{{ site.description or '' }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/static/css/styles.css"/>
+  </head>
+  <body>
+    <div class="bg-gradient">
+      <div class="gradient-focus"></div>
+      <div class="gradient-pulse"></div>
+    </div>
+    {% set contact = site.get('contact', {}) %}
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="/{{ lang }}/">
+          <span class="brand-mark">{{ site.brand or 'veikin' }}</span>
+          <span class="brand-sub">web studio</span>
+        </a>
+        <nav class="nav-links">
+          <a class="nav-link" href="/{{ lang }}/">{{ t.nav_home }}</a>
+          <a class="nav-link" href="/{{ lang }}/works.html">{{ t.nav_works }}</a>
+        </nav>
+        <div class="nav-right">
+          {% if contact.email %}
+            <a class="nav-link highlight" href="mailto:{{ contact.email }}">{{ t.nav_contact }}</a>
+          {% endif %}
+          <div class="locale-switch">
+            <a class="chip" href="/ja/" aria-label="日本語">日本語</a>
+            <a class="chip" href="/zh/" aria-label="中文">中文</a>
+            <a class="chip" href="/en/" aria-label="English">EN</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="container page-content">
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <p>© {{ site.brand or 'veikin' }} · {{ t.footer_rights or '' }}</p>
+          <p class="footer-note">Made in Japan · 静态与动态双引擎</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/static/js/main.js"></script>
+  </body>
+  </html>
