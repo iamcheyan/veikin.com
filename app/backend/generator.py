@@ -26,8 +26,22 @@ def _jinja_env() -> Environment:
         enable_async=False,
     )
     env.globals.update({
-        "static": lambda path: f"/app/static/{path}",
+        # 使用相对路径，确保在 /ja/, /zh/, /en/ 下本地预览时资源可达
+        "static": lambda path: f"../app/static/{path}",
     })
+    
+    def asset_url(path: str) -> str:
+        # 将 JSON 或模板中的 /static/... 转换为 ../app/static/...
+        if not isinstance(path, str):
+            return path
+        p = path.strip()
+        if p.startswith("/static/"):
+            return "../app" + p
+        if p.startswith("static/"):
+            return "../app/" + p
+        return p
+
+    env.filters["asset_url"] = asset_url
     return env
 
 

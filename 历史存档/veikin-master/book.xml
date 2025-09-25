@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<veikinbook>
+	<item tag="veikin2012">
+		<vol>19</vol>
+		<name>未境第十九期</name>
+		<date>2012-08-29</date>
+	</item>
+	<item tag="veikin2010">
+		<vol>18</vol>
+		<name>倏然</name>
+		<date>2010-08-29</date>
+	</item>
+	<item tag="veikin2010">
+		<vol>17</vol>
+		<name>时光机</name>
+		<date>2010-05-03</date>
+	</item>
+	<item tag="castle2009">
+		<vol>16</vol>
+		<name>匿焰</name>
+		<date>2009-10-06</date>
+	</item>
+	<item tag="castle2009">
+		<vol>15</vol>
+		<name>渲染</name>
+		<date>2009-08-11</date>
+	</item>
+	<item tag="castle2009">
+		<vol>14</vol>
+		<name>花殇</name>
+		<date>2009-04-25</date>
+	</item>
+	<item tag="castle2009">
+		<vol>13</vol>
+		<name>梦航</name>
+		<date>2009-01-19</date>
+	</item>
+	<item tag="castle">
+		<vol>12</vol>
+		<name>微亮</name>
+		<date>2008-08-29</date>
+	</item>
+	<item tag="castle">
+		<vol>11</vol>
+		<name>未境</name>
+		<date>2008-07-05</date>
+	</item>
+	<item tag="castle">
+		<vol>10</vol>
+		<name>塔</name>
+		<date>2008-05-12</date>
+	</item>
+	<item tag="castle">
+		<vol>09</vol>
+		<name>以流觞为界</name>
+		<date>2008-04-09</date>
+	</item>
+	<item tag="castle">
+		<vol>08</vol>
+		<name>夜笙歌</name>
+		<date>2008-04-10</date>
+	</item>
+	<item tag="castle">
+		<vol>07</vol>
+		<name>预览版</name>
+		<date>2008-02-17</date>
+	</item>
+	<item tag="castle">
+		<vol>06</vol>
+		<name>祁梦日</name>
+		<date>2008-02-12</date>
+	</item>
+	<item tag="castle">
+		<vol>05</vol>
+		<name>撒冷星</name>
+		<date>2008-01-29</date>
+	</item>
+	<item tag="castle">
+		<vol>04</vol>
+		<name>未央日</name>
+		<date>2007-12-13</date>
+	</item>
+	<item tag="castle">
+		<vol>03</vol>
+		<name>栾游志</name>
+		<date>2007-10-28</date>
+	</item>
+	<item tag="castle">
+		<vol>02</vol>
+		<name>夏末祭</name>
+		<date>2007-09-29</date>
+	</item>
+	<item tag="castle">
+		<vol>01</vol>
+		<name>创世纪</name>
+		<date>2007-08-29</date>
+	</item>
+</veikinbook>

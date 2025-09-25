@@ -5,7 +5,7 @@
     <div class="grid works">
       {% for work in site.works %}
         <a class="card lift" href="{{ work.url }}" target="_blank" rel="noopener">
-          <img src="{{ work.image }}" alt="{{ work.title }}"/>
+          <img src="{{ work.image | asset_url }}" alt="{{ work.title }}"/>
           <div class="card-body">
             <h3>{{ work.title }}</h3>
             <p>{{ work.description }}</p>

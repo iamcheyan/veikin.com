@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>沐安殿 | bbs.veikin.com</title>
+<meta name="Keywords" content="澈言" />
+<meta name="Description" content="沐安殿是[veikin未境]创作小组的官方论坛。" />
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="css/bbs.css" />
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<section class="muan">
+	<header class="fn-clear">
+		<nav>
+			<ul>
+				<li class="on"><a href="javascript:void(0)">论坛首页</a></li>
+				<li><a href="javascript:void(0)">第十九期讨论区</a></li>
+				<!-- <li><a href="javascript:void(0)">电台</a></li> -->
+				<li><a href="javascript:void(0)">投稿</a></li>
+			</ul>
+		</nav>
+		<hgroup>
+			<a class="logo" href="javascript:void(0)"><h1>沐安殿</h1></a>
+			<h2>沐安殿是[veikin未境]创作小组的官方论坛。</h2>
+		</hgroup>
+	</header>
+	<div class="bbs-img">
+		<a href="javascript:void(0)" target="_blank">
+			<img src="images/top.png">
+		</a>
+	</div>
+	<section class="list fn-clear">
+		<div class="listCon fn-clear">
+			<div class="fn-clear">
+				<dl class="fn-left">
+					<dt>综合讨论区</dt>
+					<dd>各种事情都可以讨论，也可以灌水，不限制任何话题，但请注意和谐。</dd>
+					<dd>斑竹：月三三，胡小米</dd>
+				</dl>
+				<div class="listNum fn-right">
+					1232 / 213123
+				</div>
+			</div>
+			<ul class="listHot clear">
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+			</ul>
+			<a href="javascirpt:void(0)" class="more">more>></a>
+		</div>
+		<div class="listCon fn-clear">
+			<div class="fn-clear">
+				<dl class="fn-left">
+					<dt>综合讨论区</dt>
+					<dd>各种事情都可以讨论，也可以灌水，不限制任何话题，但请注意和谐。</dd>
+					<dd>斑竹：月三三，胡小米</dd>
+				</dl>
+				<div class="listNum fn-right">
+					1232 / 213123
+				</div>
+			</div>
+			<ul class="listHot clear">
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+			</ul>
+			<a href="javascirpt:void(0)" class="more">more>></a>
+		</div>
+		<div class="listCon fn-clear">
+			<div class="fn-clear">
+				<dl class="fn-left">
+					<dt>综合讨论区</dt>
+					<dd>各种事情都可以讨论，也可以灌水，不限制任何话题，但请注意和谐。</dd>
+					<dd>斑竹：月三三，胡小米</dd>
+				</dl>
+				<div class="listNum fn-right">
+					1232 / 213123
+				</div>
+			</div>
+			<ul class="listHot clear">
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+				<li>1.论坛权限设置中的浏览与阅读限设置中的浏览与阅读限设置中的浏览与阅读(23/23123)</li>
+			</ul>
+			<a href="javascirpt:void(0)" class="more">more>></a>
+		</div>
+	</section>
+	<footer>
+	<footer> Copyright &copy; 2012 veikin. All rights reserved. </footer>
+</section>
+
+</body>
+</html>

@@ -3,7 +3,7 @@ import os
 from pathlib import Path
 from typing import Dict, Any
 
-from flask import Flask, jsonify, request, render_template, redirect
+from flask import Flask, jsonify, request, render_template, redirect, url_for
 
 from .generator import generate_all
 
@@ -33,6 +33,25 @@ def create_app() -> Flask:
         static_folder=str(STATIC_DIR),
         static_url_path="/static",
     )
+
+    # 与静态站点生成器保持一致：提供 `static(path)` 模板函数
+    # 在 Flask 运行时返回 /static/...，在静态生成时由 generator 提供 /app/static/...
+    app.jinja_env.globals.update({
+        "static": lambda path: url_for("static", filename=path),
+    })
+
+    def asset_url(path: str) -> str:
+        if not isinstance(path, str):
+            return path
+        p = path.strip()
+        # 在 Flask 下静态资源一律走 /static/
+        if p.startswith("/static/"):
+            return p
+        if p.startswith("static/"):
+            return "/" + p
+        return p
+
+    app.jinja_env.filters["asset_url"] = asset_url
 
     @app.get("/admin/health")
     def health() -> Dict[str, str]:

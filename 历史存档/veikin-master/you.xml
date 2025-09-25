@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<you>
+	<item tag="admin">
+		<youname>澈言</youname>
+		<youinfor>主编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog>http://iamcheyan.com</youblog>
+		<youimg>cheyan</youimg>
+	</item>
+	<item tag="admin">
+		<youname>翔翼</youname>
+		<youinfor>电台主播</youinfor>
+		<youallinfor>1989-8-1</youallinfor>
+		<youblog></youblog>
+		<youimg>xiangyi</youimg>
+	</item>
+	<item tag="other">
+		<youname>月Mo</youname>
+		<youinfor>插画家</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yuemo</youimg>
+	</item>
+	<item tag="other">
+		<youname>依依</youname>
+		<youinfor>独立音乐制作人</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yiyi</youimg>
+	</item>
+	<item tag="other">
+		<youname>应小七</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yingxiaoqi</youimg>
+	</item>
+	<item tag="other">
+		<youname>夜小幕</youname>
+		<youinfor>文编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yexiaomu</youimg>
+	</item>
+	<item tag="other">
+		<youname>小辛</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xin</youimg>
+	</item>
+	<item tag="other">
+		<youname>夏小九</youname>
+		<youinfor>美编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiaxiaojiu</youimg>
+	</item>
+	<item tag="other">
+		<youname>小佑</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiaoyou</youimg>
+	</item>
+	<item tag="other">
+		<youname>夏花花</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiahuahua</youimg>
+	</item>
+	<item tag="other">
+		<youname>唯一</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>weiyi</youimg>
+	</item>
+	<item tag="other">
+		<youname>味道</youname>
+		<youinfor>协力主编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>weidao</youimg>
+	</item>
+	<item tag="other">
+		<youname>TOM君</youname>
+		<youinfor>模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>tom</youimg>
+	</item>
+	<item tag="other">
+		<youname>苏小次</youname>
+		<youinfor>《祈光》主编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>suxiaoci</youimg>
+	</item>
+	<item tag="other">
+		<youname>苏暮合</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>sumuhe</youimg>
+	</item>
+	<item tag="other">
+		<youname>七殿下</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>qidianxia</youimg>
+	</item>
+	<item tag="other">
+		<youname>南墨</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>nanmo</youimg>
+	</item>
+	<item tag="other">
+		<youname>Mi大王</youname>
+		<youinfor>插画/摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>mi</youimg>
+	</item>
+	<item tag="other">
+		<youname>树</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>lynn</youimg>
+	</item>
+	<item tag="other">
+		<youname>泊辰</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog>http://t.sina.com.cn/remiiel</youblog>
+		<youimg>lizai</youimg>
+	</item>
+	<item tag="other">
+		<youname>雷鹏</youname>
+		<youinfor>模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>leipeng</youimg>
+	</item>
+	<item tag="other">
+		<youname>k崽</youname>
+		<youinfor>美编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>k</youimg>
+	</item>
+	<item tag="other">
+		<youname>诙邪Zz</youname>
+		<youinfor>美编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>huixie</youimg>
+	</item>
+	<item tag="other">
+		<youname>熏</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>hinoto</youimg>
+	</item>
+	<item tag="other">
+		<youname>盒子</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>hezi</youimg>
+	</item>
+	<item tag="other">
+		<youname>阿贺</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>he</youimg>
+	</item>
+	<item tag="other">
+		<youname>寒轩扬</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>hanxuanyang</youimg>
+	</item>
+	<item tag="other">
+		<youname>D崽</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>d</youimg>
+	</item>
+	<item tag="other">
+		<youname>carrie</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>carrie</youimg>
+	</item>
+	<item tag="other">
+		<youname>马小北</youname>
+		<youinfor>书法家</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>bei</youimg>
+	</item>
+	<item tag="other">
+		<youname>安沐</youname>
+		<youinfor>文编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>anmu</youimg>
+	</item>
+	<item tag="other">
+		<youname>安末</youname>
+		<youinfor>文编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>anmo</youimg>
+	</item>
+	<item tag="admin">
+		<youname>Digidea</youname>
+		<youinfor>字体设计师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog>http://typeland.com</youblog>
+		<youimg>digidea</youimg>
+	</item>
+	<item tag="admin">
+		<youname>柳言语</youname>
+		<youinfor>文编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yanyu</youimg>
+	</item>
+	<item tag="admin">
+		<youname>疯娃娃</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>feng</youimg>
+	</item>
+	<item tag="admin">
+		<youname>叶涵</youname>
+		<youinfor>万能美少女</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>gezi</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>郭娅</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>guoya</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>小白</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiaobai</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>谌远飞</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yuanfei</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>夏雨</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiayu</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>雯子</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>wenzi</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>肖娜</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiaona</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>黄梅</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>huangmei</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>姜婷</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>jiangting</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>鸭鸭</youname>
+		<youinfor>lemon - 模特</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yaya</youimg>
+	</item>
+	<item tag="lemon">
+		<youname>佳妮</youname>
+		<youinfor>lemon - 摄影师/组长</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>jiani</youimg>
+	</item>
+	<item tag="other">
+		<youname>blank</youname>
+		<youinfor>文艺女青年</youinfor>
+		<youallinfor></youallinfor>
+		<youblog>http://blank.tc</youblog>
+		<youimg>blank</youimg>
+	</item>
+	<item tag="other">
+		<youname>Kuolyang</youname>
+		<youinfor>Web Programmer</youinfor>
+		<youallinfor></youallinfor>
+		<youblog>http://blank.tc</youblog>
+		<youimg>zhanyi</youimg>
+	</item>
+	<item tag="other">
+		<youname>Ning.S</youname>
+		<youinfor>《雏菊》杂志主编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog>http://www.chujubook.com</youblog>
+		<youimg>chuju</youimg>
+	</item>
+	<item tag="other">
+		<youname>欧小柒</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiaoqi</youimg>
+	</item>
+	<item tag="other">
+		<youname>夜心</youname>
+		<youinfor>玩刀人</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yexin</youimg>
+	</item>
+	<item tag="fm">
+		<youname>cathy</youname>
+		<youinfor>FM HYSSION - NJ</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>cathy</youimg>
+	</item>
+	<item tag="fm">
+		<youname>jason</youname>
+		<youinfor>FM HYSSION - NJ</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>jason</youimg>
+	</item>
+	<item tag="fm">
+		<youname>stone</youname>
+		<youinfor>FM HYSSION - NJ</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>stone</youimg>
+	</item>
+	<item tag="fm">
+		<youname>淇奥</youname>
+		<youinfor>FM HYSSION - NJ</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>qiao</youimg>
+	</item>
+	<item tag="fm">
+		<youname>小念</youname>
+		<youinfor>FM HYSSION - NJ</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiaonian</youimg>
+	</item>
+	<item tag="fm">
+		<youname>小鹏</youname>
+		<youinfor>FM HYSSION - NJ</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiaopeng</youimg>
+	</item>
+	<item tag="fm">
+		<youname>梓昂</youname>
+		<youinfor>FM HYSSION - NJ</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>ziang</youimg>
+	</item>
+	<item tag="fm">
+		<youname>Noir</youname>
+		<youinfor>FM HYSSION - 电台美术</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>noir</youimg>
+	</item>
+	<item tag="fm">
+		<youname>小沫</youname>
+		<youinfor>FM HYSSION - 人人宣传</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xiaomo</youimg>
+	</item>
+	<item tag="fm">
+		<youname>世界末日</youname>
+		<youinfor>FM HYSSION - 文字写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>mori</youimg>
+	</item>
+<item tag="fm">
+		<youname>vivi</youname>
+		<youinfor>FM HYSSION - 文字写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>vivi</youimg>
+	</item>
+<item tag="fm">
+		<youname>候E</youname>
+		<youinfor>FM HYSSION - 新浪宣传</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>houe</youimg>
+	</item>
+	<item tag="fm">
+		<youname>CJ</youname>
+		<youinfor>FM HYSSION - 音频处理</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>cj</youimg>
+	</item>
+	<item tag="fm">
+		<youname>马境璟</youname>
+		<youinfor>M</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>majuan</youimg>
+	</item>
+	<item tag="mixliefe">
+		<youname>nonota</youname>
+		<youinfor>MIX LIFE 摄影组</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>nonota</youimg>
+	</item>
+	<item tag="mixliefe">
+		<youname>猫依</youname>
+		<youinfor>MIX LIFE 摄影组</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>cat</youimg>
+	</item>
+	<item tag="mixliefe">
+		<youname>烟纵</youname>
+		<youinfor>MIX LIFE 摄影组</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yanzong</youimg>
+	</item>
+	<item tag="fm">
+		<youname>永泽</youname>
+		<youinfor>职业广告人</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yongze</youimg>
+	</item>
+	<item tag="fm">
+		<youname>痞子lee</youname>
+		<youinfor>文编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>pizileo</youimg>
+	</item>
+	<item tag="fm">
+		<youname>心情硬币</youname>
+		<youinfor>好人姐姐</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>xinqingyingbi</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>团子</youname>
+		<youinfor>沐安殿成员</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>tuanzi</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>西米</youname>
+		<youinfor>沐安殿成员</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>ximi</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>字迹</youname>
+		<youinfor>沐安殿成员</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>ziji</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>nancy</youname>
+		<youinfor>沐安殿成员</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>nancy</youimg>
+	</item>
+		<item tag="bbs">
+		<youname>独白</youname>
+		<youinfor>沐安殿成员</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>dubai</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>老范</youname>
+		<youinfor>词作者</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>laofan</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>梁阿碰</youname>
+		<youinfor>若你喜欢怪人，其实我很美</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>kouzi</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>唐夏</youname>
+		<youinfor>文编</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>tangxia</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>易水寒</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>yishuihan</youimg>
+	</item>
+	<item tag="bbs">
+		<youname>穹月风华</youname>
+		<youinfor>被迫奔波在现实中的追梦人</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>fenghua</youimg>
+	</item>
+	<item tag="admin">
+		<youname>fei妃</youname>
+		<youinfor>摄影师</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>fei</youimg>
+	</item>
+	<item tag="other">
+		<youname>失踪人口</youname>
+		<youinfor>沐安殿成员</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>shizong</youimg>
+	</item>
+	<item tag="other">
+		<youname>艾蜜梨</youname>
+		<youinfor>写手</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>aimili</youimg>
+	</item>
+	<item tag="other">
+		<youname>团子和月三三</youname>
+		<youinfor>情侣</youinfor>
+		<youallinfor></youallinfor>
+		<youblog></youblog>
+		<youimg>sannan</youimg>
+	</item>
+</you>
