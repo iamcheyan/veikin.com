@@ -22,16 +22,47 @@
           <img src="{{ static('logo/logo.png') }}" alt="{{ site.brand or 'veikin' }}" class="brand-logo"/>
         </a>
         <nav class="nav-links">
-          <a class="nav-link" href="/{{ lang }}/">{{ t.nav_home }}</a>
-          <a class="nav-link" href="/{{ lang }}/about.html">{{ t.nav_about or 'About' }}</a>
-          <a class="nav-link" href="/{{ lang }}/works.html">{{ t.nav_works }}</a>
+          <a class="nav-link" href="/{{ lang }}/" title="{{ t.nav_home }}">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+            <span class="nav-text">{{ t.nav_home }}</span>
+          </a>
+          <a class="nav-link" href="/{{ lang }}/about.html" title="{{ t.nav_about or 'About' }}">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <path d="M12 17h.01"/>
+            </svg>
+            <span class="nav-text">{{ t.nav_about or 'About' }}</span>
+          </a>
+          <a class="nav-link" href="/{{ lang }}/works.html" title="{{ t.nav_works }}">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="3" rx="2"/>
+              <path d="M2,7l20,0"/>
+              <path d="M2,11l5,0"/>
+              <path d="M8,11l8,0"/>
+              <path d="M16,11l5,0"/>
+            </svg>
+            <span class="nav-text">{{ t.nav_works }}</span>
+          </a>
         </nav>
         <div class="nav-right">
-          <div class="locale-switch">
-            <a class="chip" href="/ja/" aria-label="日本語">日本語</a>
-            <a class="chip" href="/zh/" aria-label="中文">中文</a>
-            <a class="chip" href="/en/" aria-label="English">EN</a>
-          </div>
+        <div class="locale-switch">
+          <a class="chip" href="/ja/" aria-label="日本語" title="日本語">
+            <span class="locale-flag">🇯🇵</span>
+            <span class="locale-text">日本語</span>
+          </a>
+          <a class="chip" href="/zh/" aria-label="中文" title="中文">
+            <span class="locale-flag">🇨🇳</span>
+            <span class="locale-text">中文</span>
+          </a>
+          <a class="chip" href="/en/" aria-label="English" title="English">
+            <span class="locale-flag">🇺🇸</span>
+            <span class="locale-text">EN</span>
+          </a>
+        </div>
         </div>
       </div>
     </header>
