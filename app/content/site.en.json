@@ -8,10 +8,10 @@
     "subtitle": "Fast, maintainable, multilingual. Built for brands that seek velocity and character.",
     "note": "Static-first · Multilingual · Lightweight delivery",
     "cta_primary": { "label": "View recent work", "url": "/en/works.html" },
-    "cta_secondary": { "label": "Start a project", "url": "mailto:hello@veikin.com" }
+    "cta_secondary": { "label": "Start a project", "url": "mailto:me@iamcheyan.com" }
   },
   "contact": {
-    "email": "hello@veikin.com",
+    "email": "me@iamcheyan.com",
     "phone": "+818012345678",
     "whatsapp": "818012345678"
   },
@@ -21,18 +21,35 @@
     { "title": "Built for the horizon", "description": "Japanese/Chinese/English in one workflow for cross-market growth." }
   ],
   "about": "We work with founders and small teams to ship seaworthy sites and compact app services — clear systems, minimal surface area, long-term maintainability.",
+  "about_title": "Building websites that sail",
+  "about_subtitle": "Our belief in navigating uncharted waters",
+  "about_mission": "With static as sail, engineering as keel, and design as helm, we provide maximum navigational power with minimum resources.",
+  "about_values": [
+    { "title": "Pirate agility", "description": "Start small, verify fast, then land safe." },
+    { "title": "Navigator precision", "description": "Choose technology from long-term maintenance perspective, minimize operational burden." },
+    { "title": "Captain's vision", "description": "Design thinking for multilingual support and international expansion." }
+  ],
+  "about_mission_title": "Our Mission",
+  "about_values_title": "Our Values",
+  "about_contact_title": "Let's start a project",
+  "about_contact_description": "We'd love to hear about your project and discuss how we can help you set sail.",
+  "about_contact_btn": "Contact us",
   "works": [
     { "title": "Restaurant Website", "description": "Photo-forward menu and booking flow.", "image": "/static/images/sample1.jpg", "url": "https://example.com", "tags": ["Restaurant", "Design", "Static"] },
     { "title": "SaaS Landing", "description": "Clear value proposition for B2B audience.", "image": "/static/images/sample2.jpg", "url": "https://example.com", "tags": ["SaaS", "B2B"] }
   ],
   "t": {
     "nav_home": "Home",
+    "nav_about": "About",
     "nav_works": "Works",
     "nav_contact": "Let's talk",
     "contact_prompt": "Let's talk",
     "section_about": "About",
     "section_works": "Portfolio",
     "view_all": "View all",
+    "filter_by_tag": "Filter by tag",
+    "filter_all": "All",
+    "filter_no_results": "No projects match this tag yet.",
     "footer_rights": "All rights reserved."
   }
 }

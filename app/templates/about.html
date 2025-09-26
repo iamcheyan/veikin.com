@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% block content %}
+  {% set contact = site.get('contact', {}) %}
+  {% set locale_ui = {
+    'ja': {
+      'studio_label': 'スタジオハイライト',
+      'base_label': '拠点',
+      'base_value': '東京・リモート',
+      'languages_label': '対応言語',
+      'languages_value': '日本語 / 中文 / English',
+      'contact_label': '連絡先'
+    },
+    'zh': {
+      'studio_label': '工作室亮点',
+      'base_label': '所在',
+      'base_value': '东京 · 远程协作',
+      'languages_label': '服务语言',
+      'languages_value': '日语 / 中文 / 英语',
+      'contact_label': '联系邮箱'
+    },
+    'en': {
+      'studio_label': 'Studio highlights',
+      'base_label': 'Base',
+      'base_value': 'Tokyo · Remote friendly',
+      'languages_label': 'Languages',
+      'languages_value': 'Japanese / Chinese / English',
+      'contact_label': 'Contact'
+    }
+  } %}
+  {% set ui = locale_ui.get(lang, locale_ui['en']) %}
+
+  <section class="section">
+    <div class="section-head">
+      <h1 class="section-title">{{ t.nav_about or 'About us' }}</h1>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-hero">
+        <h2 class="hero-title">{{ site.about_title or t.about_title or '' }}</h2>
+        <p class="hero-subtitle">{{ site.about_subtitle or t.about_subtitle or '' }}</p>
+      </div>
+      
+      <div class="brand-showcase">
+        <div class="brand-card">
+          <span class="brand-card__label">{{ ui.studio_label }}</span>
+          <div class="brand-card__logo">
+            <div class="brand-card__logo-ring">
+              <img src="{{ static('logo/logo.png') }}" alt="{{ site.brand or 'veikin' }}" class="brand-card__logo-img" loading="lazy"/>
+            </div>
+            {% if site.hero.tagline %}
+              <p class="brand-card__tagline">{{ site.hero.tagline }}</p>
+            {% endif %}
+          </div>
+          {% if site.hero.note %}
+            <p class="brand-card__note">{{ site.hero.note }}</p>
+          {% endif %}
+          {% if site.highlights %}
+            <div class="brand-card__chips">
+              {% for highlight in site.highlights %}
+                <span class="chip sm brand-chip">{{ highlight.title }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+        <div class="brand-meta">
+          <div class="brand-meta__rows">
+            <div class="brand-meta__row">
+              <span class="brand-meta__label">{{ ui.base_label }}</span>
+              <span class="brand-meta__value">{{ ui.base_value }}</span>
+            </div>
+            <div class="brand-meta__row">
+              <span class="brand-meta__label">{{ ui.languages_label }}</span>
+              <span class="brand-meta__value">{{ ui.languages_value }}</span>
+            </div>
+            {% if contact.email %}
+              <div class="brand-meta__row">
+                <span class="brand-meta__label">{{ ui.contact_label }}</span>
+                <a class="brand-meta__value brand-meta__link" href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+              </div>
+            {% endif %}
+          </div>
+          {% if site.highlights %}
+            <ul class="brand-mission-list">
+              {% for highlight in site.highlights %}
+                <li class="brand-mission-item">
+                  <span class="brand-mission-index">{{ '%02d' % loop.index }}</span>
+                  <div class="brand-mission-copy">
+                    <h4>{{ highlight.title }}</h4>
+                    <p>{{ highlight.description }}</p>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+      
+      <div class="about-text">
+        <p class="about-description">{{ site.about }}</p>
+      </div>
+
+      {% if site.about_mission %}
+        <div class="about-mission">
+          <h3>{{ t.about_mission_title or 'Our Mission' }}</h3>
+          <p>{{ site.about_mission }}</p>
+        </div>
+      {% endif %}
+
+      {% if site.about_values %}
+        <div class="about-values">
+          <h3>{{ t.about_values_title or 'Our Values' }}</h3>
+          <div class="values-grid">
+            {% for value in site.about_values %}
+              <div class="value-card">
+                <h4>{{ value.title }}</h4>
+                <p>{{ value.description }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if site.about_team %}
+        <div class="about-team">
+          <h3>{{ t.about_team_title or 'Our Team' }}</h3>
+          <div class="team-grid">
+            {% for member in site.about_team %}
+              <div class="team-card">
+                <div class="team-photo">
+                  <img src="{{ member.photo | asset_url }}" alt="{{ member.name }}" loading="lazy">
+                </div>
+                <h4>{{ member.name }}</h4>
+                <p class="team-role">{{ member.role }}</p>
+                <p class="team-description">{{ member.description }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if site.about_process %}
+        <div class="about-process">
+          <h3>{{ t.about_process_title or 'Our Process' }}</h3>
+          <div class="process-steps">
+            {% for step in site.about_process %}
+              <div class="process-step">
+                <span class="process-number">{{ '%02d' % loop.index }}</span>
+                <h4>{{ step.title }}</h4>
+                <p>{{ step.description }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="about-contact">
+        <h3>{{ t.about_contact_title or 'Let\'s start a project' }}</h3>
+        <p>{{ t.about_contact_description or 'We\'d love to hear about your project and discuss how we can help.' }}</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:{{ contact.email }}">{{ t.about_contact_btn or 'Contact us' }}</a>
+          <a class="btn outline" href="/{{ lang }}/works.html">{{ t.view_all }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

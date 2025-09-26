@@ -23,6 +23,7 @@
         </a>
         <nav class="nav-links">
           <a class="nav-link" href="/{{ lang }}/">{{ t.nav_home }}</a>
+          <a class="nav-link" href="/{{ lang }}/about.html">{{ t.nav_about or 'About' }}</a>
           <a class="nav-link" href="/{{ lang }}/works.html">{{ t.nav_works }}</a>
         </nav>
         <div class="nav-right">
@@ -41,7 +42,7 @@
       <div class="container">
         <div class="footer-grid">
           <p>© {{ site.brand or 'veikin' }} · {{ t.footer_rights or '' }}</p>
-          <p class="footer-note">Made in Japan · 静态与动态双引擎</p>
+          <p class="footer-note">日本で作られました · <a href="https://github.com/iamcheyan/veikin.com" target="_blank" rel="noopener">GitHubでソースを見る</a></p>
         </div>
       </div>
     </footer>

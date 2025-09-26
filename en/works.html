@@ -19,17 +19,14 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="/en/">
-          <span class="brand-mark">veikin</span>
-          <span class="brand-sub">web studio</span>
+          <img src="../app/static/logo/logo.png" alt="veikin" class="brand-logo"/>
         </a>
         <nav class="nav-links">
           <a class="nav-link" href="/en/">Home</a>
+          <a class="nav-link" href="/en/about.html">About</a>
           <a class="nav-link" href="/en/works.html">Works</a>
         </nav>
         <div class="nav-right">
-          
-            <a class="nav-link highlight" href="mailto:hello@veikin.com">Let&#39;s talk</a>
-          
           <div class="locale-switch">
             <a class="chip" href="/ja/" aria-label="日本語">日本語</a>
             <a class="chip" href="/zh/" aria-label="中文">中文</a>
@@ -42,9 +39,39 @@
       
   <section class="section">
     <h1 class="section-title">Portfolio</h1>
-    <div class="grid works">
+
+    
+    
+        
+        
+        
+        
+        
+
+    
+      <div class="works-filter" data-tag-filter>
+        <span class="filter-label">Filter by tag</span>
+        <div class="filter-chips" role="list">
+          <button class="chip sm filter-chip is-active" type="button" data-filter-tag="*" aria-pressed="true">All</button>
+          
+            <button class="chip sm filter-chip" type="button" data-filter-tag="B2B" aria-pressed="false">B2B</button>
+          
+            <button class="chip sm filter-chip" type="button" data-filter-tag="Design" aria-pressed="false">Design</button>
+          
+            <button class="chip sm filter-chip" type="button" data-filter-tag="Restaurant" aria-pressed="false">Restaurant</button>
+          
+            <button class="chip sm filter-chip" type="button" data-filter-tag="SaaS" aria-pressed="false">SaaS</button>
+          
+            <button class="chip sm filter-chip" type="button" data-filter-tag="Static" aria-pressed="false">Static</button>
+          
+        </div>
+      </div>
+    
+
+    <div class="grid works" data-works-grid>
       
-        <a class="card lift" href="https://example.com" target="_blank" rel="noopener">
+        
+        <a class="card lift work-card" href="https://example.com" target="_blank" rel="noopener" data-work-tags="Restaurant|Design|Static">
           <img src="../app/static/images/sample1.jpg" alt="Restaurant Website"/>
           <div class="card-body">
             <h3>Restaurant Website</h3>
@@ -63,7 +90,8 @@
           </div>
         </a>
       
-        <a class="card lift" href="https://example.com" target="_blank" rel="noopener">
+        
+        <a class="card lift work-card" href="https://example.com" target="_blank" rel="noopener" data-work-tags="SaaS|B2B">
           <img src="../app/static/images/sample2.jpg" alt="SaaS Landing"/>
           <div class="card-body">
             <h3>SaaS Landing</h3>
@@ -80,6 +108,9 @@
           </div>
         </a>
       
+      <div class="works-empty" data-filter-empty hidden>
+        No projects match this tag yet.
+      </div>
     </div>
   </section>
 
@@ -88,7 +119,7 @@
       <div class="container">
         <div class="footer-grid">
           <p>© veikin · All rights reserved.</p>
-          <p class="footer-note">Made in Japan · 静态与动态双引擎</p>
+          <p class="footer-note">日本で作られました · <a href="https://github.com/iamcheyan/veikin.com" target="_blank" rel="noopener">GitHubでソースを見る</a></p>
         </div>
       </div>
     </footer>

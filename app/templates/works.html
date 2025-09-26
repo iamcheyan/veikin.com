@@ -2,16 +2,39 @@
 {% block content %}
   <section class="section">
     <h1 class="section-title">{{ t.section_works }}</h1>
-    <div class="grid works">
+
+    {% set tags = namespace(values=[]) %}
+    {% for work in site.works -%}
+      {% for tag in work.tags or [] -%}
+        {% if tag not in tags.values -%}
+          {% set tags.values = tags.values + [tag] %}
+        {% endif -%}
+      {%- endfor %}
+    {%- endfor %}
+
+    {% if tags.values %}
+      <div class="works-filter" data-tag-filter>
+        <span class="filter-label">{{ t.filter_by_tag or 'Filter by tag' }}</span>
+        <div class="filter-chips" role="list">
+          <button class="chip sm filter-chip is-active" type="button" data-filter-tag="*" aria-pressed="true">{{ t.filter_all or 'All' }}</button>
+          {% for tag in tags.values | sort %}
+            <button class="chip sm filter-chip" type="button" data-filter-tag="{{ tag }}" aria-pressed="false">{{ tag }}</button>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="grid works" data-works-grid>
       {% for work in site.works %}
-        <a class="card lift" href="{{ work.url }}" target="_blank" rel="noopener">
+        {% set work_tags = (work.tags or []) %}
+        <a class="card lift work-card" href="{{ work.url }}" target="_blank" rel="noopener" data-work-tags="{{ work_tags | join('|') }}">
           <img src="{{ work.image | asset_url }}" alt="{{ work.title }}"/>
           <div class="card-body">
             <h3>{{ work.title }}</h3>
             <p>{{ work.description }}</p>
-            {% if work.tags %}
+            {% if work_tags %}
               <div class="chips">
-                {% for tag in work.tags %}
+                {% for tag in work_tags %}
                   <span class="chip sm">{{ tag }}</span>
                 {% endfor %}
               </div>
@@ -19,7 +42,9 @@
           </div>
         </a>
       {% endfor %}
+      <div class="works-empty" data-filter-empty hidden>
+        {{ t.filter_no_results or 'No projects match this tag yet.' }}
+      </div>
     </div>
   </section>
 {% endblock %}
-

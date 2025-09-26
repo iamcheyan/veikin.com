@@ -19,17 +19,14 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="/zh/">
-          <span class="brand-mark">veikin</span>
-          <span class="brand-sub">web studio</span>
+          <img src="../app/static/logo/logo.png" alt="veikin" class="brand-logo"/>
         </a>
         <nav class="nav-links">
           <a class="nav-link" href="/zh/">首页</a>
+          <a class="nav-link" href="/zh/about.html">关于我们</a>
           <a class="nav-link" href="/zh/works.html">作品</a>
         </nav>
         <div class="nav-right">
-          
-            <a class="nav-link highlight" href="mailto:hello@veikin.com">联系我们</a>
-          
           <div class="locale-switch">
             <a class="chip" href="/ja/" aria-label="日本語">日本語</a>
             <a class="chip" href="/zh/" aria-label="中文">中文</a>
@@ -46,7 +43,7 @@
       
         <p class="hero-tagline">向远方起航</p>
       
-      <h1 class="hero-title">做敢于乘风的网页与应用</h1>
+      <h1 class="hero-title">做敢于乘风的服务与应用</h1>
       <p class="hero-subtitle">我们像海盗一样敏捷，像航海家一样严谨：为追求速度与气质的品牌，打造轻盈、稳定、易维护的多语言网站与小型应用。</p>
       <div class="hero-actions">
         
@@ -55,35 +52,13 @@
         
         
         
-          <a class="btn outline" href="mailto:hello@veikin.com">开始项目</a>
+          <a class="btn outline" href="mailto:me@iamcheyan.com">开始项目</a>
         
       </div>
       
         <p class="hero-note">静态生成 · 多语言 · 轻量交付</p>
       
     </div>
-    
-      <div class="hero-contact">
-        <span class="contact-label">欢迎联系</span>
-        <div class="contact-icons">
-          
-            <a class="contact-icon" href="https://wa.me/818012345678" aria-label="WhatsApp" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5c-5.79 0-10.5 4.71-10.5 10.5 0 1.85.49 3.66 1.42 5.27L1.5 22.5l5.42-1.39A10.44 10.44 0 0012 22.5c5.79 0 10.5-4.71 10.5-10.5S17.79 1.5 12 1.5zm0 19.5a8.93 8.93 0 01-4.56-1.28l-.33-.2-3.22.83.86-3.14-.21-.32A8.92 8.92 0 013 12c0-4.95 4.05-9 9-9s9 4.05 9 9-4.05 9-9 9zm4.75-6.73c-.26-.13-1.54-.76-1.78-.84-.24-.09-.41-.13-.58.13-.17.26-.67.84-.82 1.01-.15.17-.3.2-.56.07-.26-.13-1.08-.4-2.07-1.28-.77-.69-1.28-1.54-1.43-1.8-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.07-.13-.58-1.4-.8-1.92-.21-.51-.43-.44-.58-.45-.15-.01-.32-.01-.49-.01-.17 0-.45.06-.69.32-.24.26-.91.89-.91 2.16 0 1.27.93 2.5 1.06 2.67.13.17 1.82 2.77 4.41 3.88.62.27 1.11.43 1.49.55.63.2 1.21.17 1.67.1.51-.08 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24-.07-.11-.24-.17-.5-.3z"/></svg>
-            </a>
-          
-          
-            <a class="contact-icon" href="tel:+818012345678" aria-label="Phone">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.7 15.2c-.5-.2-1.1-.2-1.5.1l-1.1.8c-.7.5-1.7.4-2.3-.2l-2.4-2.4c-.6-.6-.7-1.5-.2-2.3l.8-1.1c.3-.4.3-1 .1-1.5l-1.6-3.4c-.3-.7-1.1-1-1.8-.8L5.4 4c-.6.2-1 .7-1.1 1.3-.2 1.6.3 4.8 3.6 8.1 3.3 3.3 6.5 3.8 8.1 3.6.6-.1 1.1-.5 1.3-1.1l.8-2.3c.2-.7-.2-1.5-.8-1.8l-3.4-1.6z"/></svg>
-            </a>
-          
-          
-            <a class="contact-icon" href="mailto:hello@veikin.com" aria-label="Email">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 7 8-7v10H4z"/></svg>
-            </a>
-          
-        </div>
-      </div>
-    
   </section>
   
     <section class="section highlights">
@@ -115,24 +90,77 @@
       <h2 class="section-title">作品展示</h2>
       <a class="btn link" href="/zh/works.html">查看全部</a>
     </div>
-    <div class="grid works">
+    
+    <!-- 标签筛选器 -->
+    <div class="works-filter">
+      <span class="filter-label">按标签筛选</span>
+      <div class="filter-chips">
+        <button class="chip filter-chip is-active" data-filter="all">全部</button>
+        
+          
+            
+              <button class="chip filter-chip" data-filter="餐饮">餐饮</button>
+            
+              <button class="chip filter-chip" data-filter="设计">设计</button>
+            
+              <button class="chip filter-chip" data-filter="静态站">静态站</button>
+            
+          
+        
+          
+            
+              <button class="chip filter-chip" data-filter="SaaS">SaaS</button>
+            
+              <button class="chip filter-chip" data-filter="B2B">B2B</button>
+            
+          
+        
+      </div>
+    </div>
+
+    <div class="grid works" data-works-grid>
       
-        <a class="card glass lift" href="https://example.com" target="_blank" rel="noopener">
+        <a class="card glass lift work-card" href="https://example.com" target="_blank" rel="noopener" data-work-tags="餐饮|设计|静态站">
           <img src="../app/static/images/sample1.jpg" alt="餐饮品牌官网"/>
           <div class="card-body">
             <h3>餐饮品牌官网</h3>
             <p>突出美食与预订的清爽设计。</p>
+            
+              <div class="chips">
+                
+                  <span class="chip sm">餐饮</span>
+                
+                  <span class="chip sm">设计</span>
+                
+                  <span class="chip sm">静态站</span>
+                
+              </div>
+            
           </div>
         </a>
       
-        <a class="card glass lift" href="https://example.com" target="_blank" rel="noopener">
+        <a class="card glass lift work-card" href="https://example.com" target="_blank" rel="noopener" data-work-tags="SaaS|B2B">
           <img src="../app/static/images/sample2.jpg" alt="SaaS 产品页"/>
           <div class="card-body">
             <h3>SaaS 产品页</h3>
             <p>面向 B2B 的清晰价值表达。</p>
+            
+              <div class="chips">
+                
+                  <span class="chip sm">SaaS</span>
+                
+                  <span class="chip sm">B2B</span>
+                
+              </div>
+            
           </div>
         </a>
       
+      
+      <!-- 空状态 -->
+      <div class="works-empty" data-filter-empty style="display: none;">
+        暂无符合该标签的项目。
+      </div>
     </div>
   </section>
 
@@ -141,7 +169,7 @@
       <div class="container">
         <div class="footer-grid">
           <p>© veikin · 版权所有</p>
-          <p class="footer-note">Made in Japan · 静态与动态双引擎</p>
+          <p class="footer-note">日本で作られました · <a href="https://github.com/iamcheyan/veikin.com" target="_blank" rel="noopener">GitHubでソースを見る</a></p>
         </div>
       </div>
     </footer>

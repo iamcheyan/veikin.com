@@ -115,6 +115,14 @@ def create_app() -> Flask:
         t = site.get("t", {}) if isinstance(site, dict) else {}
         return render_template("works.html", lang=lang, site=site, t=t)
 
+    @app.get("/<lang>/about.html")
+    def site_about(lang: str):
+        if lang not in {"ja", "zh", "en"}:
+            return "Unsupported language", 404
+        site = _load_content(lang)
+        t = site.get("t", {}) if isinstance(site, dict) else {}
+        return render_template("about.html", lang=lang, site=site, t=t)
+
     return app
 
 

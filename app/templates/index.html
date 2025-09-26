@@ -41,16 +41,44 @@
       <h2 class="section-title">{{ t.section_works }}</h2>
       <a class="btn link" href="/{{ lang }}/works.html">{{ t.view_all }}</a>
     </div>
-    <div class="grid works">
+    
+    <!-- 标签筛选器 -->
+    <div class="works-filter">
+      <span class="filter-label">{{ t.filter_by_tag }}</span>
+      <div class="filter-chips">
+        <button class="chip filter-chip is-active" data-filter="all">{{ t.filter_all }}</button>
+        {% for work in site.works[:6] %}
+          {% if work.tags %}
+            {% for tag in work.tags %}
+              <button class="chip filter-chip" data-filter="{{ tag }}">{{ tag }}</button>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="grid works" data-works-grid>
       {% for work in site.works[:6] %}
-        <a class="card glass lift" href="{{ work.url }}" target="_blank" rel="noopener">
+        <a class="card glass lift work-card" href="{{ work.url }}" target="_blank" rel="noopener" data-work-tags="{{ (work.tags or []) | join('|') }}">
           <img src="{{ work.image | asset_url }}" alt="{{ work.title }}"/>
           <div class="card-body">
             <h3>{{ work.title }}</h3>
             <p>{{ work.description }}</p>
+            {% if work.tags %}
+              <div class="chips">
+                {% for tag in work.tags %}
+                  <span class="chip sm">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
           </div>
         </a>
       {% endfor %}
+      
+      <!-- 空状态 -->
+      <div class="works-empty" data-filter-empty style="display: none;">
+        {{ t.filter_no_results }}
+      </div>
     </div>
   </section>
 {% endblock %}

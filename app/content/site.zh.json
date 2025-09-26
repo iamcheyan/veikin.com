@@ -4,14 +4,14 @@
   "description": "面向远方的网页与应用工作室。以海盗精神探索未知，用静态为帆、工程为骨、设计为舵，让品牌驶向更深的海域。",
   "hero": {
     "tagline": "向远方起航",
-    "title": "做敢于乘风的网页与应用",
+    "title": "做敢于乘风的服务与应用",
     "subtitle": "我们像海盗一样敏捷，像航海家一样严谨：为追求速度与气质的品牌，打造轻盈、稳定、易维护的多语言网站与小型应用。",
     "note": "静态生成 · 多语言 · 轻量交付",
     "cta_primary": { "label": "查看作品", "url": "/zh/works.html" },
-    "cta_secondary": { "label": "开始项目", "url": "mailto:hello@veikin.com" }
+    "cta_secondary": { "label": "开始项目", "url": "mailto:me@iamcheyan.com" }
   },
   "contact": {
-    "email": "hello@veikin.com",
+    "email": "me@iamcheyan.com",
     "phone": "+818012345678",
     "whatsapp": "818012345678"
   },
@@ -21,18 +21,35 @@
     { "title": "面向远方", "description": "日/中/英一体化流程，轻松跨市场扩张。" }
   ],
   "about": "我们与创业者与小团队并肩，做能出海的品牌网站与小而美的 App 服务，关注可维护的代码与可传承的设计系统。",
+  "about_title": "创造敢于乘风破浪的网页",
+  "about_subtitle": "向未知海疆进发的我们的信念",
+  "about_mission": "以static为帆、engineering为龙骨、design为舵，在最小资源下提供最大的航行能力。",
+  "about_values": [
+    { "title": "海盗的机动力", "description": "从小做起，快速验证，然后安全着陆。" },
+    { "title": "航海家的精确度", "description": "从长期维护角度选择技术栈，将运营成本降到最小化。" },
+    { "title": "船长的远见", "description": "考虑多语言支持与国际扩张的设计思维。" }
+  ],
+  "about_mission_title": "我们的使命",
+  "about_values_title": "我们的价值",
+  "about_contact_title": "开始一个项目吧",
+  "about_contact_description": "我们很想了解您的项目需求，讨论如何能为您提供帮助。",
+  "about_contact_btn": "联系我们",
   "works": [
     { "title": "餐饮品牌官网", "description": "突出美食与预订的清爽设计。", "image": "/static/images/sample1.jpg", "url": "https://example.com", "tags": ["餐饮", "设计", "静态站"] },
     { "title": "SaaS 产品页", "description": "面向 B2B 的清晰价值表达。", "image": "/static/images/sample2.jpg", "url": "https://example.com", "tags": ["SaaS", "B2B"] }
   ],
   "t": {
     "nav_home": "首页",
+    "nav_about": "关于我们",
     "nav_works": "作品",
     "nav_contact": "联系我们",
     "contact_prompt": "欢迎联系",
     "section_about": "关于工作室",
     "section_works": "作品展示",
     "view_all": "查看全部",
+    "filter_by_tag": "按标签筛选",
+    "filter_all": "全部",
+    "filter_no_results": "暂无符合该标签的项目。",
     "footer_rights": "版权所有"
   }
 }

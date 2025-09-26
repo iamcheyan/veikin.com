@@ -67,6 +67,11 @@ def generate_all(langs: List[str]) -> None:
         works_html = works_tpl.render(lang=lang, t=data.get("t", {}), site=data)
         (out_dir / "works.html").write_text(works_html, encoding="utf-8")
 
+        # about.html
+        about_tpl = env.get_template("about.html")
+        about_html = about_tpl.render(lang=lang, t=data.get("t", {}), site=data)
+        (out_dir / "about.html").write_text(about_html, encoding="utf-8")
+
     # root index: redirect or language selector
     root_index = """
 <!doctype html>
