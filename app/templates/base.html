@@ -19,17 +19,13 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" href="/{{ lang }}/">
-          <span class="brand-mark">{{ site.brand or 'veikin' }}</span>
-          <span class="brand-sub">web studio</span>
+          <img src="{{ static('logo/logo.png') }}" alt="{{ site.brand or 'veikin' }}" class="brand-logo"/>
         </a>
         <nav class="nav-links">
           <a class="nav-link" href="/{{ lang }}/">{{ t.nav_home }}</a>
           <a class="nav-link" href="/{{ lang }}/works.html">{{ t.nav_works }}</a>
         </nav>
         <div class="nav-right">
-          {% if contact.email %}
-            <a class="nav-link highlight" href="mailto:{{ contact.email }}">{{ t.nav_contact }}</a>
-          {% endif %}
           <div class="locale-switch">
             <a class="chip" href="/ja/" aria-label="日本語">日本語</a>
             <a class="chip" href="/zh/" aria-label="中文">中文</a>

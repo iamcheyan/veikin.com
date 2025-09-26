@@ -146,8 +146,13 @@ a:hover {
   text-decoration: none;
   color: var(--ink-strong);
   display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
 }
 
 .brand-mark {
