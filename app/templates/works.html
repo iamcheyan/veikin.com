@@ -3,8 +3,9 @@
   <section class="section">
     <h1 class="section-title">{{ t.section_works }}</h1>
 
+    {% set works_sorted = (site.works or []) | sort(attribute='date', reverse=True) %}
     {% set tags = namespace(values=[]) %}
-    {% for work in site.works -%}
+    {% for work in works_sorted -%}
       {% for tag in work.tags or [] -%}
         {% if tag not in tags.values -%}
           {% set tags.values = tags.values + [tag] %}
@@ -25,11 +26,16 @@
     {% endif %}
 
     <div class="grid works" data-works-grid>
-      {% for work in site.works %}
+      {% for work in works_sorted %}
         {% set work_tags = (work.tags or []) %}
         <a class="card lift work-card" href="{{ work.url }}" target="_blank" rel="noopener" data-work-tags="{{ work_tags | join('|') }}">
           <img src="{{ work.image | asset_url }}" alt="{{ work.title }}"/>
           <div class="card-body">
+            {% if work.date %}
+              <div class="work-card-meta">
+                <time class="work-card-date" datetime="{{ work.date }}">{{ work.date }}</time>
+              </div>
+            {% endif %}
             <h3>{{ work.title }}</h3>
             <p>{{ work.description }}</p>
             {% if work_tags %}

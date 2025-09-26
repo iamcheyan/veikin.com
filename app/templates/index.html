@@ -41,27 +41,36 @@
       <h2 class="section-title">{{ t.section_works }}</h2>
       <a class="btn link" href="/{{ lang }}/works.html">{{ t.view_all }}</a>
     </div>
-    
-    <!-- 标签筛选器 -->
+
+    {% set works_sorted = (site.works or []) | sort(attribute='date', reverse=True) %}
+    {% set preview_works = works_sorted[:6] %}
+    {% set tags = namespace(values=['all']) %}
+
     <div class="works-filter">
       <span class="filter-label">{{ t.filter_by_tag }}</span>
       <div class="filter-chips">
         <button class="chip filter-chip is-active" data-filter="all">{{ t.filter_all }}</button>
-        {% for work in site.works[:6] %}
-          {% if work.tags %}
-            {% for tag in work.tags %}
+        {% for work in preview_works %}
+          {% for tag in work.tags or [] %}
+            {% if tag not in tags.values %}
+              {% set tags.values = tags.values + [tag] %}
               <button class="chip filter-chip" data-filter="{{ tag }}">{{ tag }}</button>
-            {% endfor %}
-          {% endif %}
+            {% endif %}
+          {% endfor %}
         {% endfor %}
       </div>
     </div>
 
     <div class="grid works" data-works-grid>
-      {% for work in site.works[:6] %}
+      {% for work in preview_works %}
         <a class="card glass lift work-card" href="{{ work.url }}" target="_blank" rel="noopener" data-work-tags="{{ (work.tags or []) | join('|') }}">
           <img src="{{ work.image | asset_url }}" alt="{{ work.title }}"/>
           <div class="card-body">
+            {% if work.date %}
+              <div class="work-card-meta">
+                <time class="work-card-date" datetime="{{ work.date }}">{{ work.date }}</time>
+              </div>
+            {% endif %}
             <h3>{{ work.title }}</h3>
             <p>{{ work.description }}</p>
             {% if work.tags %}
@@ -74,7 +83,7 @@
           </div>
         </a>
       {% endfor %}
-      
+
       <!-- 空状态 -->
       <div class="works-empty" data-filter-empty style="display: none;">
         {{ t.filter_no_results }}

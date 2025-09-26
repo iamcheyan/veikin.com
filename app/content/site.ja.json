@@ -1,55 +1,108 @@
 {
-  "title": "veikin | 航海するウェブスタジオ",
+  "about": "創業者やスモールチームと伴走し、出航可能なサイトと小さなアプリサービスを設計・実装。長く使える設計と低い運用コストを重視します。",
+  "about_contact_btn": "お問い合わせ",
+  "about_contact_description": "あなたのプロジェクトについてぜひお聞かせください。海への出航に寄り添えます。",
+  "about_contact_title": "プロジェクトを始めませんか",
+  "about_mission": "staticを帆に、engineeringを龍骨に、designを舵として、最小資源で最大の航行力を提供します。",
+  "about_mission_title": "私たちのミッション",
+  "about_subtitle": "海図のない海に挑む私たちの信念",
+  "about_title": "航海するウェブを創る",
+  "about_values": [
+    {
+      "description": "小さく始め、素早く検証し、確実に着陸させる。",
+      "title": "海賊の機動力"
+    },
+    {
+      "description": "長期保守の観点で技術選択し、運用負荷を最小化する。",
+      "title": "航海士の精度"
+    },
+    {
+      "description": "多言語対応と国際展開を見据えた設計思想。",
+      "title": "船長の遠見"
+    }
+  ],
+  "about_values_title": "私たちの価値観",
   "brand": "ヴェイキン",
-  "description": "海図のない海へ。海賊の敏捷さと航海士の精度で、軽量なウェブと小さなアプリを設計・開発します。静的は帆、エンジニアリングは龍骨、デザインは舵。",
-  "hero": {
-    "tagline": "遠洋へ出航",
-    "title": "波に強いサイトと小さなアプリ",
-    "subtitle": "速く、保守しやすく、多言語。速度と品位を両立したウェブ体験を。",
-    "note": "Static-first · 多言語 · 軽量デリバリー",
-    "cta_primary": { "label": "制作実績を見る", "url": "/ja/works.html" },
-    "cta_secondary": { "label": "お問い合わせ", "url": "mailto:me@iamcheyan.com" }
-  },
   "contact": {
     "email": "me@iamcheyan.com",
     "phone": "+818012345678",
     "whatsapp": "818012345678"
   },
+  "description": "海図のない海へ。海賊の敏捷さと航海士の精度で、軽量なウェブと小さなアプリを設計・開発します。静的は帆、エンジニアリングは龍骨、デザインは舵。",
+  "hero": {
+    "cta_primary": {
+      "label": "制作実績を見る",
+      "url": "/ja/works.html"
+    },
+    "cta_secondary": {
+      "label": "お問い合わせ",
+      "url": "mailto:me@iamcheyan.com"
+    },
+    "note": "Static-first · 多言語 · 軽量デリバリー",
+    "subtitle": "速く、保守しやすく、多言語。速度と品位を両立したウェブ体験を。",
+    "tagline": "遠洋へ出航",
+    "title": "波に強いサイトと小さなアプリ"
+  },
   "highlights": [
-    { "title": "海賊の機動", "description": "小さく試し、素早く検証。資源を一点集中で有効活用。" },
-    { "title": "波速のパフォーマンス", "description": "静的生成 + エッジ配信で、モバイルでも滑らか。" },
-    { "title": "遠方志向の設計", "description": "日中英を一つのワークフローで。越境展開を軽やかに。" }
-  ],
-  "about": "創業者やスモールチームと伴走し、出航可能なサイトと小さなアプリサービスを設計・実装。長く使える設計と低い運用コストを重視します。",
-  "about_title": "航海するウェブを創る",
-  "about_subtitle": "海図のない海に挑む私たちの信念",
-  "about_mission": "staticを帆に、engineeringを龍骨に、designを舵として、最小資源で最大の航行力を提供します。",
-  "about_values": [
-    { "title": "海賊の機動力", "description": "小さく始め、素早く検証し、確実に着陸させる。" },
-    { "title": "航海士の精度", "description": "長期保守の観点で技術選択し、運用負荷を最小化する。" },
-    { "title": "船長の遠見", "description": "多言語対応と国際展開を見据えた設計思想。" }
-  ],
-  "about_mission_title": "私たちのミッション",
-  "about_values_title": "私たちの価値観",
-  "about_contact_title": "プロジェクトを始めませんか",
-  "about_contact_description": "あなたのプロジェクトについてぜひお聞かせください。海への出航に寄り添えます。",
-  "about_contact_btn": "お問い合わせ",
-  "works": [
-    { "title": "和食店サイト", "description": "写真重視のメニュー表示と予約導線。", "image": "/static/images/sample1.jpg", "url": "https://example.com", "tags": ["Restaurant", "Design", "Static"] },
-    { "title": "IT 企業 LP", "description": "サービス訴求のランディングページ。", "image": "/static/images/sample2.jpg", "url": "https://example.com", "tags": ["Landing", "B2B"] }
+    {
+      "description": "小さく試し、素早く検証。資源を一点集中で有効活用。",
+      "title": "海賊の機動"
+    },
+    {
+      "description": "静的生成 + エッジ配信で、モバイルでも滑らか。",
+      "title": "波速のパフォーマンス"
+    },
+    {
+      "description": "日中英を一つのワークフローで。越境展開を軽やかに。",
+      "title": "遠方志向の設計"
+    }
   ],
   "t": {
-    "nav_home": "ホーム",
-    "nav_about": "私たちについて",
-    "nav_works": "制作実績",
-    "nav_contact": "お問い合わせ",
     "contact_prompt": "ご相談はこちら",
+    "filter_all": "すべて",
+    "filter_by_tag": "タグで絞り込む",
+    "filter_no_results": "該当するタグの案件はまだありません。",
+    "footer_rights": "All rights reserved.",
+    "nav_about": "私たちについて",
+    "nav_contact": "お問い合わせ",
+    "nav_home": "ホーム",
+    "nav_works": "制作実績",
     "section_about": "私たちについて",
     "section_works": "制作実績",
-    "view_all": "すべて見る",
-    "filter_by_tag": "タグで絞り込む",
-    "filter_all": "すべて",
-    "filter_no_results": "該当するタグの案件はまだありません。",
-    "footer_rights": "All rights reserved."
-  }
+    "view_all": "すべて見る"
+  },
+  "title": "veikin | ヴェイキン",
+  "works": [
+    {
+      "title": "New project",
+      "description": "",
+      "url": "",
+      "image": "",
+      "date": "2025-09-26",
+      "tags": []
+    },
+    {
+      "title": "和食店サイト",
+      "description": "写真重視のメニュー表示と予約導線。",
+      "url": "https://example.com",
+      "image": "/static/images/sample1.jpg",
+      "date": "2024-06-12",
+      "tags": [
+        "Restaurant",
+        "Design",
+        "Static"
+      ]
+    },
+    {
+      "title": "IT 企業 LP",
+      "description": "サービス訴求のランディングページ。",
+      "url": "https://example.com",
+      "image": "/static/images/sample2.jpg",
+      "date": "2023-11-02",
+      "tags": [
+        "Landing",
+        "B2B"
+      ]
+    }
+  ]
 }

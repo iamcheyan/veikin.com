@@ -1,55 +1,100 @@
 {
-  "title": "veikin | Seafaring Web Studio",
+  "about": "We work with founders and small teams to ship seaworthy sites and compact app services — clear systems, minimal surface area, long-term maintainability.",
+  "about_contact_btn": "Contact us",
+  "about_contact_description": "We'd love to hear about your project and discuss how we can help you set sail.",
+  "about_contact_title": "Let's start a project",
+  "about_mission": "With static as sail, engineering as keel, and design as helm, we provide maximum navigational power with minimum resources.",
+  "about_mission_title": "Our Mission",
+  "about_subtitle": "Our belief in navigating uncharted waters",
+  "about_title": "Building websites that sail",
+  "about_values": [
+    {
+      "description": "Start small, verify fast, then land safe.",
+      "title": "Pirate agility"
+    },
+    {
+      "description": "Choose technology from long-term maintenance perspective, minimize operational burden.",
+      "title": "Navigator precision"
+    },
+    {
+      "description": "Design thinking for multilingual support and international expansion.",
+      "title": "Captain's vision"
+    }
+  ],
+  "about_values_title": "Our Values",
   "brand": "veikin",
-  "description": "We build lean websites and small apps with a pirate's agility and a navigator's rigor — static as the sail, engineering as the keel, design as the helm.",
-  "hero": {
-    "tagline": "Sail for the far horizon",
-    "title": "Websites and apps that ride the waves",
-    "subtitle": "Fast, maintainable, multilingual. Built for brands that seek velocity and character.",
-    "note": "Static-first · Multilingual · Lightweight delivery",
-    "cta_primary": { "label": "View recent work", "url": "/en/works.html" },
-    "cta_secondary": { "label": "Start a project", "url": "mailto:me@iamcheyan.com" }
-  },
   "contact": {
     "email": "me@iamcheyan.com",
     "phone": "+818012345678",
     "whatsapp": "818012345678"
   },
+  "description": "We build lean websites and small apps with a pirate's agility and a navigator's rigor — static as the sail, engineering as the keel, design as the helm.",
+  "hero": {
+    "cta_primary": {
+      "label": "View recent work",
+      "url": "/en/works.html"
+    },
+    "cta_secondary": {
+      "label": "Start a project",
+      "url": "mailto:me@iamcheyan.com"
+    },
+    "note": "Static-first · Multilingual · Lightweight delivery",
+    "subtitle": "Fast, maintainable, multilingual. Built for brands that seek velocity and character.",
+    "tagline": "Sail for the far horizon",
+    "title": "Websites and apps that ride the waves"
+  },
   "highlights": [
-    { "title": "Pirate agility", "description": "Prototype fast, validate faster, invest where it matters." },
-    { "title": "Wave-speed performance", "description": "Static rendering + edge delivery for smooth mobile experience." },
-    { "title": "Built for the horizon", "description": "Japanese/Chinese/English in one workflow for cross-market growth." }
-  ],
-  "about": "We work with founders and small teams to ship seaworthy sites and compact app services — clear systems, minimal surface area, long-term maintainability.",
-  "about_title": "Building websites that sail",
-  "about_subtitle": "Our belief in navigating uncharted waters",
-  "about_mission": "With static as sail, engineering as keel, and design as helm, we provide maximum navigational power with minimum resources.",
-  "about_values": [
-    { "title": "Pirate agility", "description": "Start small, verify fast, then land safe." },
-    { "title": "Navigator precision", "description": "Choose technology from long-term maintenance perspective, minimize operational burden." },
-    { "title": "Captain's vision", "description": "Design thinking for multilingual support and international expansion." }
-  ],
-  "about_mission_title": "Our Mission",
-  "about_values_title": "Our Values",
-  "about_contact_title": "Let's start a project",
-  "about_contact_description": "We'd love to hear about your project and discuss how we can help you set sail.",
-  "about_contact_btn": "Contact us",
-  "works": [
-    { "title": "Restaurant Website", "description": "Photo-forward menu and booking flow.", "image": "/static/images/sample1.jpg", "url": "https://example.com", "tags": ["Restaurant", "Design", "Static"] },
-    { "title": "SaaS Landing", "description": "Clear value proposition for B2B audience.", "image": "/static/images/sample2.jpg", "url": "https://example.com", "tags": ["SaaS", "B2B"] }
+    {
+      "description": "Prototype fast, validate faster, invest where it matters.",
+      "title": "Pirate agility"
+    },
+    {
+      "description": "Static rendering + edge delivery for smooth mobile experience.",
+      "title": "Wave-speed performance"
+    },
+    {
+      "description": "Japanese/Chinese/English in one workflow for cross-market growth.",
+      "title": "Built for the horizon"
+    }
   ],
   "t": {
-    "nav_home": "Home",
-    "nav_about": "About",
-    "nav_works": "Works",
-    "nav_contact": "Let's talk",
     "contact_prompt": "Let's talk",
+    "filter_all": "All",
+    "filter_by_tag": "Filter by tag",
+    "filter_no_results": "No projects match this tag yet.",
+    "footer_rights": "All rights reserved.",
+    "nav_about": "About",
+    "nav_contact": "Let's talk",
+    "nav_home": "Home",
+    "nav_works": "Works",
     "section_about": "About",
     "section_works": "Portfolio",
-    "view_all": "View all",
-    "filter_by_tag": "Filter by tag",
-    "filter_all": "All",
-    "filter_no_results": "No projects match this tag yet.",
-    "footer_rights": "All rights reserved."
-  }
+    "view_all": "View all"
+  },
+  "title": "veikin | ヴェイキン",
+  "works": [
+    {
+      "title": "Restaurant Website",
+      "description": "Photo-forward menu and booking flow.",
+      "url": "https://example.com",
+      "image": "/static/images/sample1.jpg",
+      "date": "2024-06-12",
+      "tags": [
+        "Restaurant",
+        "Design",
+        "Static"
+      ]
+    },
+    {
+      "title": "SaaS Landing",
+      "description": "Clear value proposition for B2B audience.",
+      "url": "https://example.com",
+      "image": "/static/images/sample2.jpg",
+      "date": "2023-11-02",
+      "tags": [
+        "SaaS",
+        "B2B"
+      ]
+    }
+  ]
 }

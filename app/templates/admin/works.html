@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>veikin · Works Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}" />
+  </head>
+  <body class="admin-body">
+    <div class="admin-bg-gradient"></div>
+    <header class="admin-header">
+      <div class="admin-header__inner">
+        <div class="admin-header__brand">
+          <img src="{{ url_for('static', filename='logo/logo.png') }}" alt="veikin" />
+          <div class="admin-header__copy">
+            <span class="admin-header__label">veikin studio</span>
+            <h1 class="admin-header__title">Works Console</h1>
+          </div>
+        </div>
+        <div class="admin-header__actions">
+          <button class="admin-btn ghost" data-export-json>
+            <svg class="export-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17,8 12,3 7,8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+              <path d="m7 16 1.5-3H9.5a1.5 1.5 0 0 1 0 3H8z"/>
+            </svg>
+            <span>导出备份</span>
+          </button>
+          <a class="admin-btn" href="/ja/" target="_blank" rel="noopener">View site</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-main" data-admin-root>
+      <section class="admin-panel">
+        <div class="admin-panel__head">
+          <div>
+            <h2>Projects</h2>
+            <p class="admin-panel__subtitle">Manage showcase items across languages. Changes save to JSON immediately.</p>
+          </div>
+          <div class="admin-lang-toggle" role="tablist" aria-label="Languages">
+            {% for lang in langs %}
+              <button class="admin-lang-chip{% if loop.first %} is-active{% endif %}" type="button" role="tab" data-lang="{{ lang }}">
+                {{ lang.upper() }}
+              </button>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="admin-toolbar">
+          <div class="admin-toolbar__left">
+            <button class="admin-btn primary" data-add-work>
+              <span>New project</span>
+            </button>
+          </div>
+          <div class="admin-toolbar__right" data-save-status>
+            <span class="status-dot is-idle"></span>
+            <span class="status-label">Idle</span>
+          </div>
+        </div>
+        <div class="work-grid" data-work-grid>
+          <!-- Cards injected by JS -->
+        </div>
+      </section>
+    </main>
+
+    <template id="work-card-template">
+      <article class="work-card" data-work-card>
+        <header class="work-card__header">
+          <div class="work-card__index" data-index></div>
+          <div class="work-card__preview" data-preview>
+            <img data-preview-img alt="" />
+            <span class="work-card__preview-placeholder" data-preview-placeholder>No image</span>
+          </div>
+        </header>
+        <div class="work-card__body">
+          <div class="work-card__media">
+            <div class="work-card__media-actions">
+              <button class="admin-btn ghost sm" type="button" data-upload-image>Upload image</button>
+              <a class="admin-link" data-open-image target="_blank" rel="noopener" hidden>Open image</a>
+            </div>
+          </div>
+          <input class="work-upload-input" type="file" accept="image/*" data-upload-input hidden />
+          <label class="work-field-inline">
+            <span class="work-card__label">Date</span>
+            <input class="work-input" type="date" name="date" />
+          </label>
+          <label>
+            <span class="work-card__label">Title</span>
+            <input class="work-input" type="text" name="title" required />
+          </label>
+          <label>
+            <span class="work-card__label">Description</span>
+            <textarea class="work-input" name="description" rows="3"></textarea>
+          </label>
+          <label>
+            <span class="work-card__label">URL</span>
+            <input class="work-input" type="url" name="url" placeholder="https://" />
+          </label>
+          <label class="work-field-hidden">
+            <span class="work-card__label">Image path</span>
+            <input class="work-input" type="text" name="image" placeholder="/static/images/sample.jpg" />
+          </label>
+          <label>
+            <span class="work-card__label">Tags</span>
+            <input class="work-input" type="text" name="tags" placeholder="Design, SaaS" />
+            <span class="work-card__hint">Separate tags with commas.</span>
+          </label>
+        </div>
+        <footer class="work-card__footer">
+          <div class="work-card__controls">
+            <button class="admin-btn ghost" type="button" data-move="up">Move up</button>
+            <button class="admin-btn ghost" type="button" data-move="down">Move down</button>
+          </div>
+          <button class="admin-btn danger" type="button" data-remove>Remove</button>
+        </footer>
+      </article>
+    </template>
+
+    <button class="admin-btn deploy-btn" data-deploy hidden>
+      <svg class="deploy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+        <path d="M2 17l10 5 10-5"/>
+        <path d="M2 12l10 5 10-5"/>
+      </svg>
+      <span class="deploy-text">重新部署</span>
+    </button>
+
+    <script>
+      window.ADMIN_CONFIG = {
+        langs: {{ langs | tojson }},
+        placeholderImage: "{{ url_for('static', filename='logo/logo.png') }}",
+        contentApi(lang) {
+          return `/admin/content/${lang}`;
+        },
+        generateApi: '/admin/generate',
+        uploadApi: '/admin/uploads'
+      };
+    </script>
+    <script src="{{ url_for('static', filename='js/admin_works.js') }}"></script>
+  </body>
+</html>

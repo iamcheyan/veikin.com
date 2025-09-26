@@ -1,5 +1,5 @@
 {
-  "title": "veikin | 航海式网页工作室",
+  "title": "veikin | ヴェイキン",
   "brand": "veikin",
   "description": "面向远方的网页与应用工作室。以海盗精神探索未知，用静态为帆、工程为骨、设计为舵，让品牌驶向更深的海域。",
   "hero": {
@@ -35,8 +35,22 @@
   "about_contact_description": "我们很想了解您的项目需求，讨论如何能为您提供帮助。",
   "about_contact_btn": "联系我们",
   "works": [
-    { "title": "餐饮品牌官网", "description": "突出美食与预订的清爽设计。", "image": "/static/images/sample1.jpg", "url": "https://example.com", "tags": ["餐饮", "设计", "静态站"] },
-    { "title": "SaaS 产品页", "description": "面向 B2B 的清晰价值表达。", "image": "/static/images/sample2.jpg", "url": "https://example.com", "tags": ["SaaS", "B2B"] }
+    {
+      "title": "餐饮品牌官网",
+      "description": "突出美食与预订的清爽设计。",
+      "image": "/static/images/sample1.jpg",
+      "url": "https://example.com",
+      "tags": ["餐饮", "设计", "静态站"],
+      "date": "2024-06-12"
+    },
+    {
+      "title": "SaaS 产品页",
+      "description": "面向 B2B 的清晰价值表达。",
+      "image": "/static/images/sample2.jpg",
+      "url": "https://example.com",
+      "tags": ["SaaS", "B2B"],
+      "date": "2023-11-02"
+    }
   ],
   "t": {
     "nav_home": "首页",

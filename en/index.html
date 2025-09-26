@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>veikin | Seafaring Web Studio · Web Studio</title>
+    <title>veikin | ヴェイキン · Web Studio</title>
     <meta name="description" content="We build lean websites and small apps with a pirate&#39;s agility and a navigator&#39;s rigor — static as the sail, engineering as the keel, design as the helm."/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="../app/static/css/styles.css"/>
+    <link rel="icon" type="image/png" href="../app/static/logo/favicon.png"/>
   </head>
   <body>
     <div class="bg-gradient">
@@ -22,16 +23,47 @@
           <img src="../app/static/logo/logo.png" alt="veikin" class="brand-logo"/>
         </a>
         <nav class="nav-links">
-          <a class="nav-link" href="/en/">Home</a>
-          <a class="nav-link" href="/en/about.html">About</a>
-          <a class="nav-link" href="/en/works.html">Works</a>
+          <a class="nav-link" href="/en/" title="Home">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9,22 9,12 15,12 15,22"/>
+            </svg>
+            <span class="nav-text">Home</span>
+          </a>
+          <a class="nav-link" href="/en/about.html" title="About">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <path d="M12 17h.01"/>
+            </svg>
+            <span class="nav-text">About</span>
+          </a>
+          <a class="nav-link" href="/en/works.html" title="Works">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="3" rx="2"/>
+              <path d="M2,7l20,0"/>
+              <path d="M2,11l5,0"/>
+              <path d="M8,11l8,0"/>
+              <path d="M16,11l5,0"/>
+            </svg>
+            <span class="nav-text">Works</span>
+          </a>
         </nav>
         <div class="nav-right">
-          <div class="locale-switch">
-            <a class="chip" href="/ja/" aria-label="日本語">日本語</a>
-            <a class="chip" href="/zh/" aria-label="中文">中文</a>
-            <a class="chip" href="/en/" aria-label="English">EN</a>
-          </div>
+        <div class="locale-switch">
+          <a class="chip" href="/ja/" aria-label="日本語" title="日本語">
+            <span class="locale-flag">🇯🇵</span>
+            <span class="locale-text">日本語</span>
+          </a>
+          <a class="chip" href="/zh/" aria-label="中文" title="中文">
+            <span class="locale-flag">🇨🇳</span>
+            <span class="locale-text">中文</span>
+          </a>
+          <a class="chip" href="/en/" aria-label="English" title="English">
+            <span class="locale-flag">🇺🇸</span>
+            <span class="locale-text">EN</span>
+          </a>
+        </div>
         </div>
       </div>
     </header>
@@ -90,8 +122,11 @@
       <h2 class="section-title">Portfolio</h2>
       <a class="btn link" href="/en/works.html">View all</a>
     </div>
+
     
-    <!-- 标签筛选器 -->
+    
+    
+
     <div class="works-filter">
       <span class="filter-label">Filter by tag</span>
       <div class="filter-chips">
@@ -99,18 +134,29 @@
         
           
             
+              
               <button class="chip filter-chip" data-filter="Restaurant">Restaurant</button>
             
+          
+            
+              
               <button class="chip filter-chip" data-filter="Design">Design</button>
             
+          
+            
+              
               <button class="chip filter-chip" data-filter="Static">Static</button>
             
           
         
           
             
+              
               <button class="chip filter-chip" data-filter="SaaS">SaaS</button>
             
+          
+            
+              
               <button class="chip filter-chip" data-filter="B2B">B2B</button>
             
           
@@ -123,6 +169,11 @@
         <a class="card glass lift work-card" href="https://example.com" target="_blank" rel="noopener" data-work-tags="Restaurant|Design|Static">
           <img src="../app/static/images/sample1.jpg" alt="Restaurant Website"/>
           <div class="card-body">
+            
+              <div class="work-card-meta">
+                <time class="work-card-date" datetime="2024-06-12">2024-06-12</time>
+              </div>
+            
             <h3>Restaurant Website</h3>
             <p>Photo-forward menu and booking flow.</p>
             
@@ -142,6 +193,11 @@
         <a class="card glass lift work-card" href="https://example.com" target="_blank" rel="noopener" data-work-tags="SaaS|B2B">
           <img src="../app/static/images/sample2.jpg" alt="SaaS Landing"/>
           <div class="card-body">
+            
+              <div class="work-card-meta">
+                <time class="work-card-date" datetime="2023-11-02">2023-11-02</time>
+              </div>
+            
             <h3>SaaS Landing</h3>
             <p>Clear value proposition for B2B audience.</p>
             
@@ -156,7 +212,7 @@
           </div>
         </a>
       
-      
+
       <!-- 空状态 -->
       <div class="works-empty" data-filter-empty style="display: none;">
         No projects match this tag yet.

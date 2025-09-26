@@ -2,8 +2,10 @@ import json
 import os
 from pathlib import Path
 from typing import Dict, Any
+from uuid import uuid4
 
 from flask import Flask, jsonify, request, render_template, redirect, url_for
+from werkzeug.utils import secure_filename
 
 from .generator import generate_all
 
@@ -15,6 +17,9 @@ CONTENT_DIR = APP_DIR / "content"
 APP_DIR = Path(__file__).resolve().parents[1]
 TEMPLATES_DIR = APP_DIR / "templates"
 STATIC_DIR = APP_DIR / "static"
+IMAGES_DIR = STATIC_DIR / "images"
+
+ALLOWED_IMAGE_EXTENSIONS = {"png", "jpg", "jpeg", "gif", "webp", "svg"}
 
 
 def _load_content(lang: str) -> Dict[str, Any]:
@@ -93,6 +98,38 @@ def create_app() -> Flask:
             return jsonify({"ok": False, "error": str(e)}), 500
         return jsonify({"ok": True})
 
+    @app.get("/admin")
+    @app.get("/admin/")
+    def admin_home():
+        return redirect("/admin/works", code=302)
+
+    @app.get("/admin/works")
+    def admin_works():
+        langs = ["ja", "zh", "en"]
+        return render_template("admin/works.html", langs=langs)
+
+    @app.post("/admin/uploads")
+    def admin_upload():
+        upload = request.files.get("file")
+        if not upload or not upload.filename:
+            return jsonify({"ok": False, "error": "no file"}), 400
+
+        filename = secure_filename(upload.filename)
+        if not filename or "." not in filename:
+            return jsonify({"ok": False, "error": "invalid filename"}), 400
+
+        ext = filename.rsplit(".", 1)[1].lower()
+        if ext not in ALLOWED_IMAGE_EXTENSIONS:
+            return jsonify({"ok": False, "error": "unsupported file type"}), 400
+
+        unique_name = f"work-{uuid4().hex}.{ext}"
+        IMAGES_DIR.mkdir(parents=True, exist_ok=True)
+        save_path = IMAGES_DIR / unique_name
+        upload.save(save_path)
+
+        public_path = f"/static/images/{unique_name}"
+        return jsonify({"ok": True, "path": public_path, "filename": unique_name})
+
     # 根路径重定向到默认语言
     @app.get("/")
     def root_redirect():
@@ -132,5 +169,3 @@ app = create_app()
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5000"))
     app.run(host="0.0.0.0", port=port, debug=True)
-
-

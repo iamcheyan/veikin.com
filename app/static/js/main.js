@@ -6,8 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const worksFilterChips = document.querySelectorAll('[data-filter-tag]');
 
   // 检查是否在首页（使用.works-filter）
-  const indexFilterChips = document.querySelectorAll('.filter-chip');
-  const indexCards = document.querySelectorAll('.work-card');
+  // 只在没有data-tag-filter时查找首页的filter chips
+  const indexPageContext = !document.querySelector('[data-tag-filter]');
+  const indexFilterChips = indexPageContext ? document.querySelectorAll('.filter-chip') : [];
+  const indexCards = indexPageContext ? document.querySelectorAll('.work-card') : [];
 
   if (worksGrid && worksFilterChips.length) {
     // Works页面筛选器逻辑
@@ -63,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     applyFilter('*');
   }
 
-  // 首页筛选器逻辑
-  if (indexFilterChips.length && indexCards.length) {
+  // 首页筛选器逻辑 - 只在确实在首页页面时启用
+  if (indexPageContext && indexFilterChips.length && indexCards.length) {
     const emptyState = document.querySelector('.works-empty');
     
     // 去重标签按钮
@@ -84,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonsToRemove.forEach(button => button.remove());
     
     // 重新获取可用的筛选按钮
-    const availableChips = document.querySelectorAll('.filter-chip');
+    const availableChips = indexPageContext ? document.querySelectorAll('.filter-chip') : [];
 
     const setActiveChip = (selected) => {
       availableChips.forEach((chip) => {
