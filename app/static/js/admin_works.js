@@ -85,13 +85,22 @@
     synchronizeLengths();
   }
 
-  function synchronizeLengths(referenceLang = config.langs[0]) {
-    const referenceEntry = ensureEntry(referenceLang);
-    const targetLength = referenceEntry.works.length;
+  function synchronizeLengths() {
+    const lengths = config.langs.map((lang) => ensureEntry(lang).works.length);
+    const targetLength = Math.max(0, ...lengths);
     config.langs.forEach((lang) => {
       const entry = ensureEntry(lang);
       while (entry.works.length < targetLength) {
-        entry.works.push(createBlankWork(referenceEntry.works[entry.works.length]?.date || ''));
+        const index = entry.works.length;
+        let dateSeed = '';
+        for (const sourceLang of config.langs) {
+          const sourceEntry = ensureEntry(sourceLang);
+          if (sourceEntry.works[index] && sourceEntry.works[index].date) {
+            dateSeed = sourceEntry.works[index].date;
+            break;
+          }
+        }
+        entry.works.push(createBlankWork(dateSeed));
       }
     });
   }
