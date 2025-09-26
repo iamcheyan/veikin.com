@@ -7,6 +7,8 @@
   const statusDot = statusContainer ? statusContainer.querySelector('.status-dot') : null;
   const statusLabel = statusContainer ? statusContainer.querySelector('.status-label') : null;
   const langButtons = Array.from(document.querySelectorAll('[data-lang]'));
+  const importBtn = document.querySelector('[data-import-json]');
+  const importInput = document.querySelector('[data-import-input]');
   const exportBtn = document.querySelector('[data-export-json]');
   const deployBtn = document.querySelector('[data-deploy]');
   const workTemplate = document.getElementById('work-card-template');
@@ -27,6 +29,103 @@
     pendingLang: null,
     nextSaveLang: null,
   };
+
+  function createBlankWork(date = '') {
+    return {
+      title: '',
+      description: '',
+      url: '',
+      image: '',
+      date,
+      tags: [],
+    };
+  }
+
+  function serializeWorks(entry) {
+    return entry.works.map((work) => ({
+      title: work.title || '',
+      description: work.description || '',
+      url: work.url || '',
+      image: work.image || '',
+      date: work.date || '',
+      tags: Array.isArray(work.tags) ? work.tags : [],
+    }));
+  }
+
+  async function fetchLanguageData(lang, { silent = false } = {}) {
+    const entry = ensureEntry(lang);
+    if (entry.content) {
+      return entry;
+    }
+    if (!silent) {
+      setStatus('loading', `Loading ${lang.toUpperCase()}…`);
+    }
+    const response = await fetch(config.contentApi(lang));
+    if (!response.ok) {
+      throw new Error(`Failed to load content (${response.status})`);
+    }
+    const data = await response.json();
+    entry.content = data;
+    entry.works = Array.isArray(data.works) ? data.works.map(normalizeWork) : [];
+    return entry;
+  }
+
+  async function ensureAllLanguagesLoaded({ silent = true } = {}) {
+    for (const lang of config.langs) {
+      try {
+        await fetchLanguageData(lang, { silent });
+      } catch (error) {
+        console.error(`Failed to load ${lang}:`, error);
+        if (!silent) {
+          showToast('Unable to load content. Please refresh.', 'error');
+        }
+        throw error;
+      }
+    }
+    synchronizeLengths();
+  }
+
+  function synchronizeLengths(referenceLang = config.langs[0]) {
+    const referenceEntry = ensureEntry(referenceLang);
+    const targetLength = referenceEntry.works.length;
+    config.langs.forEach((lang) => {
+      const entry = ensureEntry(lang);
+      while (entry.works.length < targetLength) {
+        entry.works.push(createBlankWork(referenceEntry.works[entry.works.length]?.date || ''));
+      }
+    });
+  }
+
+  async function saveLanguageDirect(lang) {
+    const entry = ensureEntry(lang);
+    if (!entry.content) {
+      return;
+    }
+    entry.content.works = serializeWorks(entry);
+    const response = await fetch(config.contentApi(lang), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(entry.content),
+    });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({ error: 'Save failed' }));
+      throw new Error(error.error || `Save failed (${response.status})`);
+    }
+  }
+
+  async function saveOtherLanguages(excludedLang) {
+    for (const lang of config.langs) {
+      if (lang === excludedLang) {
+        continue;
+      }
+      try {
+        await saveLanguageDirect(lang);
+      } catch (error) {
+        console.error(`Failed to sync ${lang}:`, error);
+        showToast(`Sync ${lang.toUpperCase()} failed.`, 'error');
+      }
+    }
+  }
 
   const STATUS_TEXT = {
     idle: 'Idle',
@@ -175,6 +274,86 @@
     }
   }
 
+  // 导入JSON备份  
+  function importJsonBackup() {
+    if (!importBtn || !importInput) {
+      return;
+    }
+    
+    importInput.click();
+  }
+
+  function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (!file) {
+      return;
+    }
+    
+    if (!file.name.toLowerCase().endsWith('.json')) {
+      showToast('请选择JSON格式的备份文件', 'error');
+      return;
+    }
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const backupData = JSON.parse(e.target.result);
+        
+        // 验证备份数据结构
+        if (typeof backupData !== 'object' || backupData === null) {
+          throw new Error('Invalid backup file format');
+        }
+        
+        // 遍历备份中的语言数据并恢复
+        Object.keys(backupData).forEach(lang => {
+          if (config.langs.includes(lang)) {
+            const entry = backupData[lang];
+            if (entry && (entry.content !== null || entry.works?.length > 0)) {
+              // 只保留合法的works数据
+              const normalizedWorks = entry.works 
+                ? entry.works.map(work => normalizeWork(work)).filter(work => work.title)
+                : [];
+              
+              store.set(lang, {
+                content: entry.content,
+                works: normalizedWorks
+              });
+            }
+          }
+        });
+        
+        // 刷新当前语言显示
+        loadLanguage(currentLang);
+        
+        setStatus('success');
+        showToast('备份导入成功！', 'success');
+        setTimeout(() => {
+          setStatus('idle');
+        }, 1500);
+        
+      } catch (error) {
+        console.error('Import failed:', error);
+        setStatus('error');
+        showToast('导入失败，请检查文件格式', 'error');
+        setTimeout(() => {
+          setStatus('idle');
+        }, 2000);
+      }
+    };
+    
+    reader.onerror = function() {
+      setStatus('error');
+      showToast('文件读取失败', 'error');
+      setTimeout(() => {
+        setStatus('idle');
+      }, 2000);
+    };
+    
+    reader.readAsText(file);
+    // 清空input以便可以重复选择同一个文件
+    event.target.value = '';
+  }
+
   function normalizeWork(raw) {
     return {
       title: raw?.title || '',
@@ -270,16 +449,20 @@
 
       refreshPreview(work.image);
 
-      dateInput.value = work.date || '';
+      if (dateInput) {
+        dateInput.value = work.date || '';
+      }
       titleInput.value = work.title;
       descriptionInput.value = work.description;
       urlInput.value = work.url;
       imageInput.value = work.image;
       tagsInput.value = work.tags.join(', ');
 
-      dateInput.addEventListener('input', (event) => {
-        updateWork(index, 'date', event.target.value);
-      });
+      if (dateInput) {
+        dateInput.addEventListener('input', (event) => {
+          updateWork(index, 'date', event.target.value);
+        });
+      }
       titleInput.addEventListener('input', (event) => {
         updateWork(index, 'title', event.target.value);
         previewImg.alt = event.target.value || 'Preview';
@@ -300,13 +483,19 @@
       });
 
       removeBtn.addEventListener('click', () => {
-        removeWork(index);
+        removeWork(index).catch((error) => {
+          console.error(error);
+          showToast('Failed to remove project.', 'error');
+        });
       });
 
       moveButtons.forEach((button) => {
         button.addEventListener('click', () => {
           const direction = button.getAttribute('data-move');
-          moveWork(index, direction === 'up' ? -1 : 1);
+          moveWork(index, direction === 'up' ? -1 : 1).catch((error) => {
+            console.error(error);
+            showToast('Reorder failed.', 'error');
+          });
         });
       });
 
@@ -361,22 +550,23 @@
     scheduleSave();
   }
 
-  function addWork() {
-    const entry = ensureEntry(currentLang);
+  async function addWork() {
+    await ensureAllLanguagesLoaded();
     const today = new Date().toISOString().slice(0, 10);
-    entry.works.unshift({
-      title: 'New project',
-      description: '',
-      url: '',
-      image: '',
-      date: today,
-      tags: [],
+    config.langs.forEach((lang) => {
+      const entry = ensureEntry(lang);
+      const newWork = createBlankWork(today);
+      if (lang === currentLang) {
+        newWork.title = 'New project';
+      }
+      entry.works.unshift(newWork);
     });
-    renderWorks(entry.works);
+    renderWorks(ensureEntry(currentLang).works);
     scheduleSave();
+    await saveOtherLanguages(currentLang);
   }
 
-  function removeWork(index) {
+  async function removeWork(index) {
     const entry = ensureEntry(currentLang);
     const works = entry.works;
     if (!works[index]) {
@@ -386,25 +576,39 @@
     if (!confirmed) {
       return;
     }
-    works.splice(index, 1);
-    renderWorks(works);
+    await ensureAllLanguagesLoaded();
+    config.langs.forEach((lang) => {
+      const langEntry = ensureEntry(lang);
+      if (index < langEntry.works.length) {
+        langEntry.works.splice(index, 1);
+      }
+    });
+    renderWorks(ensureEntry(currentLang).works);
     scheduleSave();
+    await saveOtherLanguages(currentLang);
   }
 
-  function moveWork(index, offset) {
+  async function moveWork(index, offset) {
     if (offset === 0) {
-      return;
+      return Promise.resolve();
     }
-    const entry = ensureEntry(currentLang);
-    const works = entry.works;
+    await ensureAllLanguagesLoaded();
+    const currentEntry = ensureEntry(currentLang);
     const targetIndex = index + offset;
-    if (targetIndex < 0 || targetIndex >= works.length) {
+    if (targetIndex < 0 || targetIndex >= currentEntry.works.length) {
       return;
     }
-    const [item] = works.splice(index, 1);
-    works.splice(targetIndex, 0, item);
-    renderWorks(works);
+    config.langs.forEach((lang) => {
+      const langEntry = ensureEntry(lang);
+      if (index < 0 || index >= langEntry.works.length) {
+        return;
+      }
+      const [item] = langEntry.works.splice(index, 1);
+      langEntry.works.splice(targetIndex, 0, item);
+    });
+    renderWorks(currentEntry.works);
     scheduleSave();
+    await saveOtherLanguages(currentLang);
   }
 
   function scheduleSave() {
@@ -445,14 +649,7 @@
       return Promise.resolve();
     }
 
-    entry.content.works = entry.works.map((work) => ({
-      title: work.title || '',
-      description: work.description || '',
-      url: work.url || '',
-      image: work.image || '',
-      date: work.date || '',
-      tags: Array.isArray(work.tags) ? work.tags : [],
-    }));
+    entry.content.works = serializeWorks(entry);
 
     state.isSaving = true;
     state.pendingLang = null;
@@ -499,22 +696,8 @@
 
   async function loadLanguage(lang) {
     const entry = ensureEntry(lang);
-    if (entry.content) {
-      currentLang = lang;
-      renderWorks(entry.works);
-      setStatus('idle', STATUS_TEXT.idle);
-      return;
-    }
-
-    setStatus('loading', `Loading ${lang.toUpperCase()}…`);
     try {
-      const response = await fetch(config.contentApi(lang));
-      if (!response.ok) {
-        throw new Error(`Failed to load content (${response.status})`);
-      }
-      const data = await response.json();
-      entry.content = data;
-      entry.works = Array.isArray(data.works) ? data.works.map(normalizeWork) : [];
+      await fetchLanguageData(lang, { silent: false });
       currentLang = lang;
       renderWorks(entry.works);
       setStatus('idle', STATUS_TEXT.idle);
@@ -618,13 +801,28 @@
     }
   }
 
-  addBtn.addEventListener('click', addWork);
+  addBtn.addEventListener('click', () => {
+    addWork().catch((error) => {
+      console.error(error);
+      showToast('Failed to add project.', 'error');
+    });
+  });
 
   langButtons.forEach((button) => {
     button.addEventListener('click', () => {
       switchLanguage(button.getAttribute('data-lang'), button);
     });
   });
+
+  if (importBtn) {
+    importBtn.addEventListener('click', () => {
+      importJsonBackup();
+    });
+  }
+
+  if (importInput) {
+    importInput.addEventListener('change', handleFileUpload);
+  }
 
   if (exportBtn) {
     exportBtn.addEventListener('click', () => {

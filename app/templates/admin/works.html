@@ -22,6 +22,14 @@
           </div>
         </div>
         <div class="admin-header__actions">
+          <button class="admin-btn ghost" data-import-json>
+            <svg class="import-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7,10 12,15 17,10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>导入备份</span>
+          </button>
           <button class="admin-btn ghost" data-export-json>
             <svg class="export-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -129,6 +137,8 @@
       </svg>
       <span class="deploy-text">重新部署</span>
     </button>
+
+    <input type="file" accept=".json" data-import-input hidden>
 
     <script>
       window.ADMIN_CONFIG = {
